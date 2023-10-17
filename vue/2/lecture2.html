@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lecture 2</title>
+	<style>
+		.block {
+			width: 350px;
+			height: 200px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="app">
+		<h2>Список</h2>
+		<ul>
+			<li v-for="item in listItems" :key="item.id">{{ item }}</li>
+		</ul>
+		<input type="text" v-model="newList" @keyup.enter="addItem">
+
+		<br><br>
+		<input @keyup.enter="send()" type="text">
+		<button @click="send()">Отправить</button>
+		<h2>link elem</h2>
+		<a :href="linkHref">my new link</a>
+		<!-- то же самое что v-bind:href... -->
+		<img :src="imgPhoto" alt="photo">
+
+		<h2>Конструктор</h2>
+		<input type="text" v-model="blockWidth">
+		<input type="text" v-model="blockBackgroundColor">
+		<div class="block" :style="change">
+			Lorem ipsum dolor sit amet.
+		</div>
+		<h2>{{ modelData }}</h2>
+		<input type="text" v-model="modelData">
+		<button @click="headingText()" class="heading__button">click heading</button>
+		<h2>Калькулятор</h2>
+		<input type="text" v-model.number="fisrtNumber">
+		<input type="text" v-model.number="secondNumber">
+		=
+		{{ result }}
+		<div>
+			<button @click="plus()">+</button>
+			<button @click="minus">-</button>
+			<button @click="multiply">*</button>
+			<button @click="divide">/</button>
+		</div>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+	<script>
+		new Vue({
+			el: '#app',
+			data: {
+				listItems: [1, 2, 4],
+				newList: '',
+				blockWidth: '100',
+				blockBackgroundColor: '#ccc',
+				fisrtNumber: '0',
+				secondNumber: '0',
+				result: '0',
+				modelData: '',
+				linkHref: 'product.html',
+				imgPhoto: 'photo.jpg',
+			},
+			methods: {
+				addItem() {
+					this.listItems.push(this.newList);
+				},
+				plus() {
+					this.result = this.fisrtNumber + this.secondNumber;
+				},
+				minus() {
+					this.result = this.fisrtNumber - this.secondNumber;
+				},
+				multiply() {
+					this.result = this.fisrtNumber * this.secondNumber;
+				},
+				divide() {
+					this.result = this.fisrtNumber / this.secondNumber;
+				},
+				headingText() {
+					if (this.modelData === '') {
+						this.modelData = "heading for block";
+					}
+				},
+				send() {
+					console.log('Отправили данные внутри input');
+				},
+			},
+			computed: {
+				change() {
+					return {
+						width: `${this.blockWidth}px`,
+						height: `${this.blockWidth}px`,
+						backgroundColor: this.blockBackgroundColor,
+					}
+				},
+			},
+		})
+	</script>
+
+</body>
+
+</html>

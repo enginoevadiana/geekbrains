@@ -1,0 +1,30 @@
+.drive:hover .car {
+	margin-left: 1000px;
+}
+
+.car {
+	width: 150px;
+	height: 50px;
+	border: 1px solid #000;
+	transition: margin 3s;
+}
+
+.car-1 {
+	transition-timing-function: ease;
+}
+
+.car-2 {
+	transition-timing-function: ease-in;
+}
+
+.car-3 {
+	transition-timing-function: ease-out;
+}
+
+.car-4 {
+	transition-timing-function: ease-in-out;
+}
+
+.car-1 {
+	transition-timing-function: linear;
+}

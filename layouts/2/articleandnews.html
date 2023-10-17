@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="large.css">
+	<link rel="stylesheet" href="articles.css">
+	<link rel="stylesheet" href="article-large.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Jost:wght@400;600&display=swap"
+		rel="stylesheet">
+	<title>Articles &#38; News</title>
+</head>
+
+<body>
+	<div id="app">
+		<header>
+			<logo-and-mainmenu></logo-and-mainmenu>
+
+		</header>
+		<div class="mainPageImgContainer">
+			<img src="img/articlesBanner.jpg" alt="article banner" class="mainPageImg">
+		</div>
+
+		<main>
+			<div class="latestPost">
+				<p class="articlaeNewsTitle">Latest Post</p>
+				<div class="latestPostCard">
+					<img src="img/latestPost.png" alt="latest post" class="latestPostCardImg">
+					<div class="latestPostCardText">
+						<p class="latestPostCardTextTitle">Low Cost Latest Invented Interior<br>Designing Ideas</p>
+						<p class="latestPostCardTextText">Lorem ipsum dolor sit amet, adipiscing Aliquam<br> eu sem vitae turpis
+							dignissim maximus.posuere<br> in.Contrary to popular belief.
+							<br><br>
+							Lorem Ipsum is not simply random text. It has<br> roots in a piece of classica.
+						</p>
+						<div class="latestPostCardTextSubtitleContainer">
+							<p class="latestPostCardTextSubtitle">26 December,2022</p>
+							<a href="#"><svg class="latestPostCardSvg" viewBox="0 0 52 53" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<circle cx="26" cy="26.5" r="26" fill="#F4F0EC" />
+									<path d="M23.771 33.1855L29.7139 26.4998L23.771 19.8141" stroke="#292F36" stroke-width="2"
+										stroke-linecap="round" stroke-linejoin="round" />
+								</svg></a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</main>
+
+		<div class="articlaeNews">
+			<p class="articlaeNewsTitle">Articles &#38; News</p>
+
+			<article-news-catalog></article-news-catalog>
+			<div class="pagination">
+				<a href="#"><img src="img/pagination/1.png" alt="pagination" class="paginationImg"></a>
+				<a href="#"><img src="img/pagination/2.png" alt="pagination" class="paginationImg"></a>
+				<a href="#"><img src="img/pagination/3.png" alt="pagination" class="paginationImg"></a>
+				<a href="#"><img src="img/pagination/row.png" alt="pagination" class="paginationImg"></a>
+			</div>
+		</div>
+
+		<footer-catalog></footer-catalog>
+
+
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+	<script src="articleandnews.js"></script>
+	<script src="footer.js"></script>
+	<script src="logoandmainmenu.js"></script>
+
+	<script>
+		new Vue({
+			el: '#app',
+			data: {
+
+			},
+		})
+	</script>
+
+</body>
+
+</html>

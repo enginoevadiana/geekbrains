@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Homework 2</title>
+</head>
+<!-- Разработать приложение для отображения и сортировки списка товаров. У вас есть массив объектов products, где каждый объект представляет товар с его названием и ценой. Вам необходимо отобразить список товаров и предоставить пользователю возможность сортировать товары по цене (по возрастанию и по убыванию). -->
+
+<body>
+	<div id="app">
+		<h2>Список товаров</h2>
+		<div class="sort">
+			Сортировать по цене:
+			<button @click="sortUp" class="up">По возрастанию</button>
+			<button @click="sortDown" class="down">По убыванию</button>
+		</div>
+		<div v-for="product in products" :key="product.id" class="productCard">
+			<h3 class="product_title">{{ product.title }}</h3>
+			<p class="product_price">{{ product.price }}</p>
+		</div>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+	<script>
+		new Vue({
+			el: '#app',
+			data: {
+				products: [
+					{
+						title: 'product 1',
+						price: '300'
+					},
+					{
+						title: 'product 2',
+						price: '100'
+					},
+					{
+						title: 'product 3',
+						price: '200'
+					}
+				],
+			},
+			methods: {
+				sortUp() {
+					this.products.sort((x, y) => x.price - y.price);
+				},
+				sortDown() {
+					this.products.sort((x, y) => y.price - x.price);
+				}
+			}
+		})
+	</script>
+</body>
+
+</html>

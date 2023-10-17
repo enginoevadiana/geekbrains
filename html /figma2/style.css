@@ -1,0 +1,80 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+header {
+	margin-bottom: 84px;
+}
+
+.logo1 {
+	margin-top: 40px;
+}
+
+.logo2 {
+	margin-top: 45px;
+}
+
+nav {
+	margin-top: 51px;
+}
+
+.nav_link {
+	color: #000;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+.active_link {
+	color: #F25822;
+}
+
+main {
+	margin-bottom: 162px;
+}
+
+.heading {
+	margin-bottom: 17px;
+	color: #000;
+	font-size: 60px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+.main_text {
+	margin-bottom: 37px;
+	color: #888;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+.main_button {
+	color: #AAA;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+.active_button {
+	border-radius: 50px;
+	background: #F25822;
+	box-shadow: 4px 4px 8px 0px rgba(242, 88, 34, 0.20);
+	padding: 15px 36px 16px 35px;
+	color: white;
+	font-size: 15px;
+}
+
+.partners {
+	padding-top: 97px;
+	padding-bottom: 96px;
+}

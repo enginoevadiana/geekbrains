@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Seminar 2.4</title>
+</head>
+<!-- Вы разрабатываете приложение для управления списком контактов. У вас есть форма с полями "Имя", "Фамилия" и "Email", где пользователь может вводить информацию о новом контакте. После добавления контакта он должен отображаться в списке контактов. Требуется связать форму с данными и отображать список контактов на странице. -->
+
+<body>
+	<div id="app"><br>
+		<!-- чтобы не перезагружалась страница во время отправки формы (отменяет стандартное поведение, чтобы данные не исчезли со страницы) -->
+		<form @submit.prevent="addContact">
+			<input v-model="newContact.name" type="text" placeholder="Имя"><br><br>
+			<input v-model="newContact.surname" type="text" placeholder="Фамилия"><br><br>
+			<input v-model="newContact.email" type="email" placeholder="Email"><br><br>
+			<button @click="addContact">Добавить</button>
+		</form>
+		<h3>Список контактов</h3>
+		<div v-for="contact in contacts" :key="contact.id" class="contacts">
+			<p class="name">{{ contact.name }}</p>
+			<p class="surname">{{ contact.surname }}</p>
+			<p class="email">{{ contact.email }}</p>
+		</div>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+	<script>
+		new Vue({
+			el: '#app',
+			data: {
+				contacts: [
+				],
+				newContact: {
+					name: '',
+					surname: '',
+					email: ''
+				}
+			},
+			methods: {
+				addContact() {
+					const { name, surname, email } = this.newContact;
+					this.contacts.push({
+						name,
+						surname,
+						email
+					});
+				}
+			}
+		})
+	</script>
+</body>
+
+</html>

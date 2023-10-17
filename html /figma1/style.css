@@ -1,0 +1,85 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #020A18;
+}
+
+a {
+	text-decoration: none;
+}
+
+header {
+	margin-bottom: 99px;
+}
+
+.menu {
+	padding-top: 39px;
+	padding-bottom: 39px;
+}
+
+.menu a {
+	color: var(--ffffff, #FFF);
+	font-family: Open Sans;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+}
+
+.about {
+	margin-top: 160px;
+	margin-bottom: 197px;
+}
+
+.about_info {
+	margin-top: 68px;
+	margin-left: 78px;
+}
+
+.about_caption {
+	color: var(--3-a-68-b-8, #3A68B8);
+	font-family: Open Sans;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 160%;
+	/* 28.8px */
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+
+.about_heading {
+	color: var(--ffffff, #FFF);
+	font-family: Open Sans;
+	font-size: 55px;
+	font-style: normal;
+	font-weight: 800;
+	line-height: 130%;
+	/* 71.5px */
+	margin-bottom: 40px;
+}
+
+.about_text {
+	color: var(--ffffff, #FFF);
+	font-family: Open Sans;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 160%;
+	/* 28.8px */
+	margin-bottom: 50px;
+}
+
+.about_buttons button {
+	padding: 15px 30px;
+	border-radius: 5px;
+	background: var(--3-a-68-b-8, #3A68B8);
+	color: var(--ffffff, #FFF);
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+}

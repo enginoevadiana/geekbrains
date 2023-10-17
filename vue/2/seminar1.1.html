@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Seminar 2.1</title>
+</head>
+
+<!-- Вы разрабатываете страницу для отображения информации о товаре. У вас есть объект product, который содержит информацию о товаре, включая название, цену и URL изображения товара. Вам необходимо отобразить эту информацию на странице с использованием v-bind.
+Добавьте кнопку, которая будет изменять цену товара. При нажатии на кнопку должна генерироваться скидка на товар от 1 до 20% и обновиться цена товара в соответствии с значением скидки -->
+
+<body>
+	<div id="app">
+		<div class="productCard">
+			<h3 class="productTitle">{{ product.title }}</h3>
+			<p class="productPrice">{{ calculatePrice }}</p>
+			<img :src="product.image" alt="product1" class="productImg">
+			<button @click="generateDiscount" class="changePrice">Изменить цену</button>
+		</div>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+	<script>
+		new Vue({
+			el: '#app',
+			data: {
+				product:
+				{
+					title: 'product 1',
+					price: 400,
+					image: 'product1.jpg'
+				},
+				discount: 0,
+			},
+			methods: {
+				generateDiscount() {
+					this.discount = Math.floor(Math.random() * (20));
+				}
+			},
+			computed: {
+				calculatePrice() {
+					return this.product.price - (this.product.price * this.discount / 100);
+				}
+			}
+		})
+	</script>
+</body>
+
+</html>

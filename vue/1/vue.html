@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Homework 1</title>
+</head>
+
+<!-- 1. Создать кнопку "Перевернуть". При клике на кнопку текст кнопки, должен перевернуться и отобразиться в обратном порядке. -->
+<!-- 2. Есть список элементов. Пользователь может добавлять новые элементы списка с текстом “Новый элемент списка” нажав на кнопку "Добавить". -->
+<!-- 3. * При клике на элемент списка он должен быть удален. (по желанию) -->
+
+<body>
+	<main id="app">
+		<h1>Homework 1</h1>
+		<button @click="reverseText">{{ buttonText }}</button>
+		<ul>
+			<li @click="deleteElement(id)" v-for="(element, id) in list">{{ element.name }} {{ element.id }}</li>
+		</ul>
+		<button @click="addElement">Добавить</button>
+
+	</main>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+	<script>
+		new Vue({
+			el: '#app',
+			data: {
+				buttonText: 'Перевернуть',
+				itIsNew: false,
+				elementText: 'Новый товар',
+				list: [
+					{ id: 0, name: 'Новый товар' },
+				],
+				nextElementId: 1,
+			},
+			methods: {
+				reverseText() {
+					this.buttonText = this.buttonText.split('').reverse().join('')
+				},
+				addElement() {
+					this.list.push({
+						id: this.nextElementId++,
+						name: this.elementText,
+					});
+				},
+				deleteElement(id) {
+					this.list.splice(id, 1);
+				},
+			},
+		})
+	</script>
+</body>
+
+</html>

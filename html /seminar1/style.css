@@ -1,0 +1,155 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #020a18;
+}
+
+main {
+	margin-bottom: 200px;
+}
+
+.container {
+	width: 1146px;
+	margin: 0 auto;
+}
+
+.header-nav {
+	display: flex;
+	justify-content: center;
+}
+
+.header-link {
+	color: #fff;
+	text-decoration: none;
+	font-size: 18px;
+	font-family: Open Sans;
+	font-weight: 600;
+	padding: 40px 20px;
+
+}
+
+.subtitle {
+	color: #3A68B8;
+	font-size: 18px;
+	font-family: Open Sans;
+	font-weight: 600;
+	line-height: 160%;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+
+.title {
+	color: #FFF;
+	font-size: 55px;
+	font-family: Open Sans;
+	font-weight: 800;
+	line-height: 130%;
+	margin-bottom: 40px;
+}
+
+.desc {
+	margin-bottom: 50px;
+	color: #fff;
+	font-size: 18px;
+	font-family: Open Sans;
+	font-weight: 600;
+	line-height: 160%;
+	opacity: 0.7;
+}
+
+.btn {
+	color: #fff;
+	font-size: 20px;
+	font-family: Open Sans;
+	font-weight: 600;
+	text-decoration: none;
+	padding: 30px 15px;
+	border-radius: 5px;
+	background: #3A68B8;
+	margin-right: 20px;
+	border: 3px solid transperent;
+}
+
+.main-flex {
+	display: flex;
+	justify-content: space-between;
+}
+
+.main-right,
+.main-left {
+	width: 48%;
+}
+
+.btn:hover {
+	border: 3px solid #3A68B8;
+	color: #3A68B8;
+	background-color: #fff;
+	transition: all 0.3s;
+}
+
+.flex {
+	display: flex;
+	justify-content: space-between;
+}
+
+/* AWARDS */
+
+.awards {
+	display: grid;
+	margin-top: 264px;
+	margin-bottom: 243px;
+	grid-template: 1fr 1fr 1fr/repeat(3, 362px);
+	gap: 30px;
+	justify-content: center;
+}
+
+.award {
+	padding: 30px;
+	border-radius: 10px;
+	background: #132035;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 30px;
+}
+
+/* .award_img {
+	margin: 0px 132px;
+}
+*/
+
+.award4 .award_img {
+	width: 306px;
+}
+
+.award_title {
+	/* margin-bottom: 30px; */
+	color: var(--ffffff, #FFF);
+	text-align: center;
+	font-family: Open Sans;
+	font-size: 25px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 125%;
+	/* 31.25px */
+}
+
+.award_text {
+	color: var(--ffffff, #FFF);
+	text-align: center;
+	font-family: Open Sans;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 160%;
+	/* 25.6px */
+}
+
+.award4 {
+	grid-area: 2/1/4/3;
+	gap: 60px;
+}

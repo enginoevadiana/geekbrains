@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Seminar 2.2</title>
+</head>
+<!-- Вы разрабатываете простое приложение для отображения списка пользователей. У вас есть массив объектов users, где каждый объект представляет одного пользователя с его именем и возрастом. Вам необходимо отобразить каждого пользователя из массива в виде списка на странице. -->
+
+<body>
+	<div id="app">
+		<div v-for="user in users" :key="user.id" class="users">
+			<p class="userName">{{ user.name }}</p>
+			<p class="userAge">{{ user.age }}</p>
+		</div>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+	<script>
+		new Vue({
+			el: '#app',
+			data: {
+				users: [
+					{
+						name: 'John',
+						age: 36
+					},
+					{
+						name: 'Kayle',
+						age: 39
+					},
+					{
+						name: 'Anne',
+						age: 22
+					},
+					{
+						name: 'Denis',
+						age: 20
+					},
+					{
+						name: 'Mark',
+						age: 27
+					},
+					{
+						name: 'Lora',
+						age: 29
+					}
+				]
+
+			}
+		})
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<!-- Создать кнопку “Показать еще” при клике на которую появляется контент под кнопкой, при повторном клике, контент необходимо скрыть -->
+
+<body>
+	<main id="app">
+
+		<button @click="showMore = !showMore">Показать еще</button>
+
+		<p v-show="showMore">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio deserunt deleniti non
+			delectus omnis. Ipsum, nulla fugit asperiores magnam architecto beatae alias rerum. Vero nemo deserunt amet, autem
+			assumenda quidem!</p>
+
+	</main>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+	<script>
+		new Vue({
+			el: '#app',
+			data: {
+				showMore: false,
+			},
+			methods: {
+
+			},
+		})
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<!-- 
+		Создать параграф, внутри которого будет отображаться текст “Товаров в корзине 0”
+		Создать кнопку “Купить”, при клике на которую, значение внутри параграфа будет увеличиваться на 1, при повторном нажатии на эту кнопку, счетчик не становится больше, добавить 4 таких кнопки
+		При нажатии на кнопку купить, необходимо чтобы текст внутри кнопки поменялся на “Товар в Корзине” 
+	-->
+	<main id="app">
+		<h1>{{ message }}</h1>
+		<p>Товаров в корзине {{ productCount }}</p>
+		<div v-for="good in goods">
+			<p>{{ good.name }}</p>
+			<button @click="byItem(good)">{{ good.text }}</button>
+		</div>
+	</main>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+	<script>
+		new Vue({
+			el: '#app',
+			data: {
+				message: 'Hello Vue',
+				productCount: 0,
+				goods: [
+					{ id: 1, name: 'Товар 1', text: 'Купить', added: false },
+					{ id: 2, name: 'Товар 2', text: 'Купить', added: false },
+					{ id: 3, name: 'Товар 3', text: 'Купить', added: false },
+					{ id: 4, name: 'Товар 4', text: 'Купить', added: false }
+				]
+			},
+			methods: {
+				byItem(good) {
+					if (good.added) return;
+					good.added = true;
+					good.text = 'Товар в корзине';
+					this.productCount++;
+				}
+			},
+		})
+	</script>
+</body>
+
+</html>
