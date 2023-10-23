@@ -1,0 +1,11 @@
+.checkReviewText {
+	color: red;
+}
+
+.productReviews {
+	display: none;
+}
+
+.show {
+	display: block;
+}
