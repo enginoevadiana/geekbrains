@@ -1,0 +1,26 @@
+[
+	{
+		"name": "Балет",
+		"date": "November 3",
+		"time": "14:00",
+		"gymNumber": "77",
+		"membersCount": "15",
+		"currentMembersCount": "0"
+	},
+	{
+		"name": "Бокс",
+		"date": "November 5",
+		"time": "18:00",
+		"gymNumber": "35",
+		"membersCount": "6",
+		"currentMembersCount": "0"
+	},
+	{
+		"name": "Фехтование",
+		"date": "November 3",
+		"time": "16:00",
+		"gymNumber": "16",
+		"membersCount": "10",
+		"currentMembersCount": "0"
+	}
+]
