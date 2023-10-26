@@ -6,13 +6,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Add a review</title>
 	<script src="add-review.js" defer></script>
+	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+	<nav><a href="index.html">На главную</a></nav>
 	<main>
+		<h3>Добавить отзыв</h3>
 		<form action="#" class="addReview">
-			<input class="reviewName" type="text"><br><br>
-			<textarea class="reviewText" id="review" name="review" rows="5" cols="33" required></textarea><br><br>
+			<input class="reviewName" type="text" placeholder="Название товара" required><br><br>
+			<textarea class="reviewText" id="review" name="review" rows="5" cols="33" placeholder="Отзыв"
+				required></textarea><br><br>
 			<input class="submitButton" type="submit" value="Добавить">
 		</form>
 	</main>

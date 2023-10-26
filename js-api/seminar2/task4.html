@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Task 4</title>
+</head>
+
+<body>
+	<form action="#">
+		<h2>Опросник</h2>
+		<div class="question">
+			<p>Вопрос 1: Какой ваш любимый цвет?</p>
+			<div class="options">
+				<label>
+					<input type="radio" name="q1" value="Синий"> Синий
+				</label><br>
+				<label>
+					<input type="radio" name="q1" value="Зеленый"> Зеленый
+				</label><br>
+				<label>
+					<input type="radio" name="q1" value="Красный"> Красный
+				</label><br>
+			</div>
+		</div>
+
+		<div class="question">
+			<p>Вопрос 2: Какое ваше любимое животное?</p>
+			<div class="options">
+				<label>
+					<input type="radio" name="q2" value="Собака"> Собака
+				</label><br>
+				<label>
+					<input type="radio" name="q2" value="Кот"> Кот
+				</label><br>
+				<label>
+					<input type="radio" name="q2" value="Попугай"> Попугай
+				</label><br>
+			</div>
+		</div>
+		<br>
+		<button class="finish" id="submit">Завершить опрос</button>
+	</form>
+	<div class="resultContainer">
+		<p class="results"></p>
+	</div>
+
+	<script src="script4.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+.modalWindow {
+	display: none;
+	width: 400px;
+	height: 400px;
+	padding: 20px;
+	margin: 20px;
+	background-color: lightgrey;
+}
+
+.active {
+	display: block;
+}

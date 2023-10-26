@@ -1,23 +1,14 @@
 "use strict";
+
 // Добавляем каталог товаров в константу
 const productsCatalog = document.querySelector('.productsCatalog');
 
-localStorage.setItem('name1', JSON.stringify(['review1', 'review2']));
-localStorage.setItem('name2', JSON.stringify(['review1', 'review2']));
-localStorage.setItem('name3', JSON.stringify(['review45', 'review46']));
-
-for (var i = 0; i < localStorage.length; ++i) {
-	// Вывод ключа - названия товара
-	console.log(localStorage.key(i));
-	let storedUsername = JSON.parse(localStorage.getItem(localStorage.key(i)));
-	// Вывод отзывов для данного товара
-	storedUsername.forEach((num) => {
-		console.log(num);
-	})
-}
+// localStorage.setItem('name1', JSON.stringify(['review1', 'review2']));
+// localStorage.setItem('name2', JSON.stringify(['review1', 'review2']));
+// localStorage.setItem('name3', JSON.stringify(['review45', 'review46']));
 
 //Обработка каждого товара
-for (var i = 0; i < localStorage.length; ++i) {
+for (let i = 0; i < localStorage.length; ++i) {
 	// Создание карточки товара
 	const productCard = document.createElement('div');
 	productCard.className = "productCard";
@@ -35,32 +26,39 @@ for (var i = 0; i < localStorage.length; ++i) {
 	productCard.append(productReviews);
 	// // Обработка каждого отзыва
 	let storedUsername = JSON.parse(localStorage.getItem(localStorage.key(i)));
-	// Вывод отзывов для данного товара
-	storedUsername.forEach((review, index) => {
-		let reviewText = document.createElement('p');
-		reviewText.className = "reviewText";
-		reviewText.innerHTML = review;
-		productReviews.append(reviewText);
+	if (storedUsername.length === 0) {
+		let some = document.createElement('p');
+		some.innerHTML = 'Отзывов пока нет';
+		productReviews.append(some);
+	}
+	else {
+		// Вывод отзывов для данного товара
+		storedUsername.forEach((review, index) => {
+			let reviewText = document.createElement('p');
+			reviewText.className = "reviewText";
+			reviewText.innerHTML = review;
+			productReviews.append(reviewText);
 
-		// Создание кнопки удаления отзыва
-		let deleteButton = document.createElement('button');
-		deleteButton.className = "deleteReview";
-		deleteButton.innerHTML = 'Удалить';
-		productReviews.append(deleteButton);
+			// Создание кнопки удаления отзыва
+			let deleteButton = document.createElement('button');
+			deleteButton.className = "deleteReview";
+			deleteButton.innerHTML = 'Удалить';
+			productReviews.append(deleteButton);
 
-		// Удаления отзыва при нажатии на него
-		function deleteReview(event) {
-			// console.log(storedUsername);
-			// console.log(productName.innerHTML);
-			// console.log(review);
-			storedUsername.splice(index, 1);
+			// Удаления отзыва при нажатии на него
+			function deleteReview(event) {
+				// console.log(storedUsername);
+				// console.log(productName.innerHTML);
+				// console.log(review);
+				storedUsername.splice(index, 1);
 
-			// storedUsername = storedUsername.splice(event.target, 1);
-			localStorage.setItem(productName.innerHTML, JSON.stringify(storedUsername));
-			// console.log(storedUsername);
-		}
-		deleteButton.addEventListener('click', deleteReview);
-	})
+				// storedUsername = storedUsername.splice(event.target, 1);
+				localStorage.setItem(productName.innerHTML, JSON.stringify(storedUsername));
+				// console.log(storedUsername);
+			}
+			deleteButton.addEventListener('click', deleteReview);
+		})
+	}
 
 	// Вывод отзывов при нажатии на продукт
 	function showReviews(event) {

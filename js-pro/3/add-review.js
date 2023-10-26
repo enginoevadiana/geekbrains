@@ -2,10 +2,13 @@
 function handleFormSubmit(event) {
 	// Отмена отправки формы
 	event.preventDefault();
-	let addReviewForm = document.querySelector('form');
-	let newReviewText = addReviewForm.querySelector('.reviewText');
-	let newReviewTextValue = newReviewText.value;
-	console.log(JSON.stringify(newReviewTextValue));
+	const addReviewForm = document.querySelector('form');
+
+	let newReviewName = (addReviewForm.querySelector('.reviewName')).value;
+	let newReviewText = (addReviewForm.querySelector('.reviewText')).value;
+	let arr = JSON.parse(localStorage.getItem(newReviewName)) || [];
+	arr.push(newReviewText);
+	localStorage.setItem(newReviewName, JSON.stringify(arr));
 	addReviewForm.reset();
 }
 // Обработчик события отправки формы

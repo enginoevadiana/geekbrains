@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Seminar 1</title>
+
+</head>
+
+<body>
+	<nav><a class="goForward" href="#">Вперед</a>
+		<!-- <a href="catalog.html">Каталог</a> -->
+	</nav>
+
+	<script src="script.js"></script>
+	<script>
+		/* Управление историей переходов:
+Используйте объект history для управления историей переходов на веб-странице. Создайте кнопки "Назад" и "Вперед" для перемещения по истории */
+		const goForward = document.querySelector('.goForward');
+		goForward.addEventListener('click', function (event) {
+			history.forward();
+		})
+	</script>
+</body>
+
+</html>
