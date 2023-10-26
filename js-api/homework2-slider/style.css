@@ -1,0 +1,34 @@
+h2 {
+	font-family: 'Eater', serif;
+	font-size: 40px;
+	text-align: center;
+}
+
+main {
+	margin: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 30px;
+}
+
+.bigImageContainer img {
+	width: 400px;
+}
+
+.littleImagesContainer {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+
+.littleImagesContainer img {
+	width: 200px;
+	border: 2px solid white;
+	opacity: 60%;
+}
+
+.littleImagesContainer img:hover {
+	border: 2px solid grey;
+	opacity: 100%;
+}
