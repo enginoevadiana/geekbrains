@@ -17,120 +17,69 @@
 const infoContainer = document.querySelector('.infoContainer');
 
 const json =
-	'[{"name":"Балет","date":"November 3","time":"14:00","membersCount":"15","currentMembersCount":"0"},{"name":"Бокс","date":"November 5","time":"18:00","membersCount":"6","currentMembersCount":"0"},{"name":"Фехтование","date":"November 3","time":"16:00","membersCount":"10","currentMembersCount":"0"}]'
+	'[{"name":"Балет","date":"Среда","time":"14:00","membersCount":"15","currentMembersCount":"0"},{"name":"Бокс","date":"Понедельник","time":"18:00","membersCount":"6","currentMembersCount":"0"},{"name":"Фехтование","date":"Вторник","time":"16:00","membersCount":"10","currentMembersCount":"0"}]'
 
 const sportLessons = JSON.parse(json);
 
 function dataProcess() {
-
 	sportLessons.forEach((lesson) => {
-		// let currentMembers = lesson.currentMembersCount;
 		let allMembers = lesson.membersCount;
 		const resultMarkup = `
-			<div class="lessonCard">
+			<div class="col-sm lessonCard">
 			<h4>${lesson.name}</h4>
-      <p>Дата и время занятия: ${lesson.date} ${lesson.time}</p>
-      <p>Максимальное количество участников: ${lesson.membersCount}</p>
-			<p class="inList">Количество записавшихся: ${lesson.currentMembersCount}</p>
-			<button class="goToLesson">Записаться</button>
-			<button class="neverMind">Отменить запись</button>
+      <p><span class="title">Дата и время занятия:</span>
+      ${lesson.date} ${lesson.time}</p>
+      <p><span class="title">Максимальное количество участников:</span>
+      <span class="allPossible">${lesson.membersCount}</span></p>
+			<p><span class="title">Количество записавшихся:</span>
+			<span class="inList">${lesson.currentMembersCount}</span></p>
+			<button class="btn btn-success goToLesson">Записаться</button><br>
+			<button disabled class="btn btn-warning neverMind">Отменить запись</button>
 			</div>
     `;
 		infoContainer.insertAdjacentHTML('beforeend', resultMarkup);
-
-		const addButton = document.querySelector('.goToLesson');
-		const cancelButton = document.querySelector('.neverMind');
-		const inListText = document.querySelector('.inList');
-
-		addButton.addEventListener('click', addMember);
-
-		function addMember() {
-			let members = lesson.currentMembersCount++;
-			console.log(lesson.currentMembersCount);
-			console.log(lesson.membersCount);
-			if (lesson.currentMembersCount > lesson.membersCount) {
-				addButton.disabled = true;
-			}
-			inListText.textContent = 'Количество записавшихся: ' + members;
-			// var newDiv = document.createElement("div");
-			// newDiv.textContent = members;
-
-			// infoContainer.append(newDiv);
-		}
-
-
-
-		// for (let i = 0; i < addButton.length; i++) {
-		// 	addButton[i].addEventListener("click", function () {
-		// 		currentMembers++;
-		// 		console.log(currentMembers);
-		// 		if (currentMembers > allMembers) {
-		// 			addButton.disabled = true;
-		// 		}
-		// 	});
-		// }
-
-		// closeButton.addEventListener('click', closeWindow);
-
-		// function closeWindow() {
-		// 	modalWindow.classList.toggle('active');
-		// 	openButton.disabled = false;
-		// }
-
-		console.log(lesson.name);
 	})
 }
 
 dataProcess();
 
-// console.log(sportLessons[0].name);
-// console.log(sportLessons[1].date);
-// console.log(sportLessons[2].time);
 
+const inListText = document.querySelector('.inList');
+let addButton = document.querySelectorAll('.goToLesson');
+// const neverMind = document.querySelector('.neverMind');
+let neverMind = document.querySelectorAll('.neverMind');
 
-// fetch('./data.json')
-// 	.then((response) => response.json())
-// 	.then((json) => {
-// 		// const jsonResponse = json;
-// 		// console.log(json[0].date);
-// 		console.log(json);
-// 	});
+addButton.forEach(item => {
+	item.addEventListener('click', event => {
+		let currentMembers = (event.target.closest('div')).querySelector('.inList').textContent;
+		let allMembers = Number((event.target.closest('div')).querySelector('.allPossible').textContent);
+		const articleItem = (event.target.closest('div')).querySelector('.inList');
+		addButton = (event.target.closest('div')).querySelector('.goToLesson');
+		neverMind = (event.target.closest('div')).querySelector('.neverMind');
 
-// let url = './data.json';
-// let response = fetch('./data.json');
+		currentMembers++;
+		neverMind.disabled = false;
+		if (currentMembers >= allMembers) {
+			addButton.disabled = true;
+		}
 
-// let commits = response.json(); // читаем ответ в формате JSON
+		articleItem.textContent = currentMembers;
+	});
+});
 
-// async function foo() {
-// 	let obj;
-// 	const res = await fetch('./data.json')
-// 	obj = await res.json();
-// 	const parcing = map(obj);
-// 	// console.log(obj)
-// 	return parcing;
-// }
+neverMind.forEach(item => {
+	item.addEventListener('click', event => {
+		let currentMembers = (event.target.closest('div')).querySelector('.inList').textContent;
+		const articleItem = (event.target.closest('div')).querySelector('.inList');
+		addButton = (event.target.closest('div')).querySelector('.goToLesson');
+		neverMind = (event.target.closest('div')).querySelector('.neverMind');
 
-// const results = foo()(
-// 	ids.map(id =>
-// 		asyncFunc(id).then(result => ({ id, result }))
-// 	)
-// );
-// const firstItem = results[0];
-// console.log(firstItem.result, firstItem.id);
-// let data = foo();
-// console.log(data);
+		addButton.disabled = false;
+		currentMembers--;
+		if (currentMembers === 0) {
+			neverMind.disabled = true;
+		}
 
-// foo();
-
-// alert(commits[0].name);
-
-
-// const json = JSON.parse(jsonResponse);
-
-// console.log(json.name);
-// // Luke Skywalker
-// console.log(json.date);
-// // male
-// console.log(json.time);
-// // 19BBY
-
+		articleItem.textContent = currentMembers;
+	});
+})

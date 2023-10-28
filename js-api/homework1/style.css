@@ -1,0 +1,16 @@
+body {
+	margin: 30px;
+	box-sizing: border-box;
+}
+
+h3 {
+	margin-bottom: 30px;
+}
+
+.title {
+	color: #6c757d;
+}
+
+.goToLesson {
+	margin-bottom: 10px;
+}
