@@ -1,12 +1,12 @@
 ## Курсы
 
-### HTML & CSS
+### HTML and CSS
 
 [Веб-вёрстка HTML/CSS](https://github.com/enginoevadiana/geekbrains/tree/main/html)
 
 [Продвинутый HTML + CSS](https://github.com/enginoevadiana/geekbrains/tree/main/html-pro)
 
-### JS & vue
+### JS and vue
 
 [Основы Javascript](https://github.com/enginoevadiana/geekbrains/tree/main/js)
 
