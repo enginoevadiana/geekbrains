@@ -5,8 +5,7 @@
 [Веб-вёрстка HTML/CSS](https://github.com/enginoevadiana/geekbrains/tree/main/html)
 
 [Продвинутый HTML + CSS](https://github.com/enginoevadiana/geekbrains/tree/main/html-pro)
-
-
+<br><br>
 ### JS and vue
 
 [Основы Javascript](https://github.com/enginoevadiana/geekbrains/tree/main/js)
