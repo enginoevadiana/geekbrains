@@ -39,5 +39,5 @@
 #### [Задача 2](https://github.com/enginoevadiana/geekbrains/blob/main/js-api/seminar1/script2.js)
 - Веб-страница, которая позволяет пользователю динамически управлять элементами на странице (добавить элемент, удалить, клонировать).
 
-	#### [Задача 3](https://github.com/enginoevadiana/geekbrains/blob/main/js-api/seminar1/script3.js)
+#### [Задача 3](https://github.com/enginoevadiana/geekbrains/blob/main/js-api/seminar1/script3.js)
 - Веб-страницу для отображения списка статей. Кнопки "Добавить статью", "Удалить", "Редактировать".
