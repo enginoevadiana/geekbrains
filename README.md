@@ -3,6 +3,15 @@
 ### HTML & CSS
 
 [Веб-вёрстка HTML/CSS](https://github.com/enginoevadiana/geekbrains/tree/main/html)
+
 [Продвинутый HTML + CSS](https://github.com/enginoevadiana/geekbrains/tree/main/html-pro)
 
-[Contribution guidelines for this project](docs/CONTRIBUTING.md)
+### JS & vue
+
+[Основы Javascript](https://github.com/enginoevadiana/geekbrains/tree/main/js)
+
+[Продвинутый JavaScript](https://github.com/enginoevadiana/geekbrains/tree/main/js-pro)
+
+[JavaScript про API браузеров](https://github.com/enginoevadiana/geekbrains/tree/main/js-api)
+
+[Фреймворк Vue.js](https://github.com/enginoevadiana/geekbrains/tree/main/vue)
