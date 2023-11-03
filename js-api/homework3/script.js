@@ -1,17 +1,27 @@
 const photoContainer = document.querySelector('.photoContainer');
+let photoForHistory;
 
-// let photoForHistory = [];
-let photoForHistory = JSON.parse(localStorage.getItem('lastPhoto'));
-// localStorage.setItem('lastPhoto', JSON.stringify(photoForHistory));
-console.log(localStorage.getItem('lastPhoto'));
+if (localStorage.getItem('lastPhoto') === null) {
+	photoForHistory = [];
+}
+else {
+	photoForHistory = JSON.parse(localStorage.getItem('lastPhoto'));
+}
+let historyLengthEnd = 5;
 
 async function fetchPhoto() {
 	try {
-		const response = await fetch(`https://api.unsplash.com/photos/random?client_id=9Ik9WiFnw9BApZ9xxvFWdv7cW3LdzjUiL6Ojde-eEUE`);
+		// const response = await fetch(`https://api.unsplash.com/photos/random?client_id=9Ik9WiFnw9BApZ9xxvFWdv7cW3LdzjUiL6Ojde-eEUE`);
+		const response = await fetch(`https://api.unsplash.com/photos/random?client_id=YtQxKsLwBCu79iQtAqfmKeQ27i7XY9wKvgxtfJ8uOGk`);
+
 		const photo = await response.json();
+
+		if (photoForHistory.length === historyLengthEnd) {
+			photoForHistory.shift();
+		}
 		photoForHistory.push(photo.urls.small);
 		localStorage.setItem('lastPhoto', JSON.stringify(photoForHistory));
-		console.log(localStorage.getItem('lastPhoto'));
+
 		return photo;
 	} catch (error) {
 		console.error('Ошибка при загрузке фотографий:', error);
@@ -37,9 +47,11 @@ const likeIcon = document.querySelector('.likeIcon');
 const heartBreakIcon = document.querySelector('.heartBreakIcon');
 
 let likeCount = document.querySelector('.likeCount');
+if (localStorage.getItem('likeCount') === null) {
+	localStorage.setItem('likeCount', 0);
+}
 let storedLikeCount = localStorage.getItem('likeCount');
 likeCount.textContent = storedLikeCount;
-// localStorage.setItem('likeCount', 0);
 
 likeIcon.addEventListener('click', () => {
 	storedLikeCount++;
