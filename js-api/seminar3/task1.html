@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!--  Создайте интерфейс веб-страницы, который включает в себя следующие элементы:
+Выпадающий список (select) с категориями товаров.
+Список товаров, который будет отображать товары в соответствии с выбранной категорией.
+Каждый товар в списке должен содержать название и категорию.
+
+При выборе категории товаров в выпадающем списке, форма должна следить за изменениями.
+Динамически обновите список товаров на странице, чтобы отображать только товары из выбранной категории.
+-->
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Task 1</title>
+</head>
+
+<body>
+
+	<h1>Выберите категорию товара</h1>
+	<form id="products-form">
+		<select id="category-select">
+			<option value="">Выберите категорию</option>
+			<!-- <option value="electronics">Электроника</option>
+			<option value="appliances">Бытовая техника</option>
+			<option value="books">Книги</option>
+			<option value="cloth">Одежда</option>
+			<option value="furniture">Мебель</option> -->
+			<option value="Электроника">Электроника</option>
+			<option value="Бытовая техника">Бытовая техника</option>
+			<option value="Книги">Книги</option>
+			<option value="Одежда">Одежда</option>
+			<option value="Мебель">Мебель</option>
+
+		</select>
+	</form>
+
+	<h2>Товары</h2>
+	<div class="productsContainer"></div>
+
+	<script>
+		const productsData = [
+			{
+				id: 1,
+				name: "Ноутбук",
+				category: "Электроника",
+			},
+			{
+				id: 2,
+				name: "Смартфон",
+				category: "Электроника",
+			},
+			{
+				id: 3,
+				name: "Кофемашина",
+				category: "Бытовая техника",
+			},
+			{
+				id: 4,
+				name: "Фотокамера",
+				category: "Электроника",
+			},
+			{
+				id: 5,
+				name: "Микроволновая печь",
+				category: "Бытовая техника",
+			},
+			{
+				id: 6,
+				name: "Книга",
+				category: "Книги",
+			},
+			{
+				id: 7,
+				name: "Футболка",
+				category: "Одежда",
+			},
+			{
+				id: 8,
+				name: "Шапка",
+				category: "Одежда",
+			},
+			{
+				id: 9,
+				name: "Стул",
+				category: "Мебель",
+			},
+			{
+				id: 10,
+				name: "Стол",
+				category: "Мебель",
+			},
+		];
+
+		const selectCategory = document.querySelector('#category-select');
+		const productsList = document.querySelector('.productsContainer');
+
+		selectCategory.onchange = function () {
+			productsList.textContent = '';
+			// console.log('что-то выбрано');
+			const selectedCategory = selectCategory.value;
+			// console.log(selectCategory.value);
+			let productCard;
+
+			for (let value of productsData) {
+				if (selectedCategory === value.category) {
+					// console.log(value.category);
+					productCard = document.createElement('div');
+					productCard.textContent = value.name;
+					productsList.append(productCard);
+				}
+			}
+
+		};
+	</script>
+</body>
+
+</html>
