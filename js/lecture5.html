@@ -8,9 +8,123 @@
 </head>
 
 <body>
+	<p class="movieName"></p>
+	<p class="movieCountWatched"></p>
+	<button class="makeWatched" onclick="movie.makeWatched()">+</button>
+	<button class="makeUnwatched" onclick="movie.makeUnwatched()">-</button>
 
 	<script>
-		// 
+		const product = {
+			name: 'table',
+			price: 5000
+		}
+		console.log(product);
+
+		// добавляем свойство объекта
+		product.description = 'minimalistic, comfortable';
+		console.log(product);
+
+		// удалим свойство
+		delete product.description;
+		console.log(product);
+
+		// функция в объекте - это метод
+		const product2 = {
+			name: 'table',
+			price: 5000,
+			count: 2,
+			buy: function () {
+				if (product2.count > 0) {
+					console.log('Вы купили данный товар');
+				}
+				else {
+					console.log('Данный товар нельзя добавить в корзину');
+				}
+			}
+		}
+
+		product2.buy();
+
+		// const movie = {
+		// 	name: 'The Matrix',
+		// 	watched: false,
+		// 	watchedCount: 0,
+		// 	makeWatched: function () {
+		// 		if (this.watchedCount === 0) {
+		// 			this.watched = true;
+		// 			console.log(this.watched);
+		// 		}
+		// 		this.watchedCount++;
+		// 		console.log(this.watchedCount);
+		// 	},
+		// 	makeUnwatched: function () {
+		// 		if (this.watchedCount === 1) {
+		// 			this.watched = false;
+		// 			console.log(this.watched);
+		// 		}
+		// 		this.watchedCount--;
+		// 		console.log(this.watchedCount);
+		// 	}
+		// }
+
+		// можно использовать this, можно movie (но если использовать movie, сложно будет изменить имя объекта или скопировать его для создания нового объекта: придется везде менять ключевое слово)
+		const movie = {
+			name: 'The Matrix',
+			watched: false,
+			watchedCount: 0,
+			makeWatched: function () {
+				if (movie.watchedCount === 0) {
+					movie.watched = true;
+					console.log(movie.watched);
+				}
+				movie.watchedCount++;
+				console.log(movie.watchedCount);
+			},
+			makeUnwatched: function () {
+				if (movie.watchedCount === 1) {
+					movie.watched = false;
+					console.log(movie.watched);
+				}
+				movie.watchedCount--;
+				console.log(movie.watchedCount);
+			}
+		}
+
+		// movie.makeWatched();
+
+		const movieName = document.querySelector('.movieName');
+		movieName.textContent = movie.name;
+		const movieCountWatched = document.querySelector('.movieCountWatched');
+		movieCountWatched.textContent = movie.watchedCount;
+
+		const simpleObj = {
+			name: 'Harry',
+			surname: 'Potter',
+			isWizard: true
+		}
+
+		console.log(Object.keys(simpleObj));
+
+		console.log(Object.values(simpleObj));
+
+		console.log(Object.entries(simpleObj));
+
+		const array = [10, 5, 7, 3, 8, 1];
+
+		// filter
+		array.filter(item => item >= 5);
+		console.log(array.filter(item => item >= 5));
+		// основной массив не изменился
+		console.log(array);
+
+		// some
+		console.log(array.some(item => item >= 5));
+
+		// reduce (сумма всех элементов)
+		console.log(array.reduce((a, b) => a + b));
+		// среднее арифметическое
+		console.log(array.reduce((a, b) => a + b) / array.length);
+
 
 	</script>
 </body>

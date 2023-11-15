@@ -10,25 +10,45 @@
 */
 
 const products = [
-  {
-    id: 3,
-    price: 127,
-    photos: ["1.jpg", "2.jpg"],
-  },
-  {
-    id: 5,
-    price: 499,
-    photos: [],
-  },
-  {
-    id: 10,
-    price: 26,
-    photos: ["3.jpg"],
-  },
-  {
-    id: 8,
-    price: 78,
-  },
+	{
+		id: 3,
+		price: 127,
+		photos: ["1.jpg", "2.jpg"],
+	},
+	{
+		id: 5,
+		price: 499,
+		photos: [],
+	},
+	{
+		id: 10,
+		price: 26,
+		photos: ["3.jpg"],
+	},
+	{
+		id: 8,
+		price: 78,
+	},
 ];
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+const productsWithPhoto = products.filter((product) => {
+	if (product.photos) {
+		if ((product.photos).length > 0) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	else {
+		return false;
+	}
+});
+
+console.log(productsWithPhoto);
+
+products.sort(function (a, b) {
+	return parseFloat(a.price) - parseFloat(b.price);
+});
+
+console.log(products);

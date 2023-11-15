@@ -11,14 +11,12 @@ const numbers = {
 	key3: 4,
 	key4: 1,
 	key5: -244,
-	key6: 0,
+	key6: 3,
 	key7: 7,
 };
 
-numbers.forEach(element => {
-	if (element >= 3) {
-		console.log(element);
+for (const key in numbers) {
+	if (numbers[key] >= 3) {
+		console.log(numbers[key]);
 	}
-});
-
-// Здесь пишем решение, данный комментарий необходимо стереть.
+}
