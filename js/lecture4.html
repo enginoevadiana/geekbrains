@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lecture 4</title>
+</head>
+
+<body>
+
+	<script>
+		// while
+		// let pass = Number(prompt('Введите пароль'));
+		// while (pass !== 123) {
+		// 	pass = Number(prompt('Введите пароль'));
+		// }
+
+		// do while
+		// let pass2;
+		// do {
+		// 	pass2 = Number(prompt('Введите пароль'));
+		// } while (pass2 !== 123);
+
+		// for
+		// const number = Number(prompt('Введите значение N'));
+		// for (let i = 1; i <= number; i++) {
+		// 	console.log(i);
+		// }
+
+		// массивы надо всегда создавать через константу
+		const arr = [0, 1, 4, 'gjg', 'bye'];
+		// вывод последнего элемента массива
+		console.log(arr[arr.length - 1]); // bye
+
+		// pop - удаляет последний элемент из массива
+		console.log(arr.pop());
+		console.log(arr);
+
+		//перевести строку в массив по разделителю
+		const url = 'Users/diana/Documents/geekbrains/gbCode/js/lecture4.html';
+		const urlArray = url.split('/');
+		console.log(urlArray);
+
+		// 2 способа получить имя самого файла из url
+		// без удаления
+		console.log(urlArray[urlArray.length - 1]);
+		console.log(urlArray);
+		// с удалением названия из массива
+		console.log(urlArray.pop());
+		console.log(urlArray);
+
+		// соединить массив обратно в строку
+		let newUrl = urlArray.join('/');
+		console.log(newUrl);
+
+		// сдвиг (удаление первого элемента)
+		// записываем удаленный элемент в переменную
+		let shiftedElement = arr.shift();
+		console.log(shiftedElement); // 0
+		console.log(arr);
+
+		// добавим элемент в начало массива
+		arr.unshift(6); //[1, 4, 'gjg']
+		console.log(arr); // [6, 1, 4, 'gjg']
+
+		// slice
+		const people = ['Neo', 'Bella', 'Harry'];
+		const newPeople = people.slice();
+		console.log(`Оригинальный массив ${people}`);
+		console.log(`Новый массив ${newPeople}`);
+		newPeople.push('Dobby');
+		console.log(`Оригинальный массив ${people}`);
+		console.log(`Новый массив ${newPeople}`);
+		// без split, у нас бы добавился элемент Dobby в оба массива
+		const newNewPeople = people;
+		console.log(`Оригинальный массив ${people}`);
+		console.log(`Самый новый массив ${newNewPeople}`);
+		newNewPeople.push('Dobby');
+		console.log(`Оригинальный массив ${people}`);
+		console.log(`Новый массив ${newNewPeople}`);
+
+		// indexOf
+		console.log(newPeople.indexOf('Dobby'));
+	</script>
+</body>
+
+</html>
