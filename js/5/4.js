@@ -31,24 +31,27 @@ const products = [
 	},
 ];
 
+// ниже сокращение
+// const productsWithPhoto = products.filter((product) => {
+// 	if (product.photos) {
+// 		if ((product.photos).length > 0) {
+// 			return true;
+// 		}
+// 		else {
+// 			return false;
+// 		}
+// 	}
+// 	else {
+// 		return false;
+// 	}
+// });
+
 const productsWithPhoto = products.filter((product) => {
-	if (product.photos) {
-		if ((product.photos).length > 0) {
-			return true;
-		}
-		else {
-			return false;
-		}
-	}
-	else {
-		return false;
-	}
+	return product.photos && product.photos.length > 0;
 });
 
 console.log(productsWithPhoto);
 
-products.sort(function (a, b) {
-	return parseFloat(a.price) - parseFloat(b.price);
-});
+products.sort((a, b) => { return a.price - b.price });
 
 console.log(products);
