@@ -28,6 +28,7 @@ async function loadUsers() {
 }
 
 function showUsersList(usersList) {
+	usersContainer.textContent = '';
 	usersList.forEach(user => {
 		let userItem = document.createElement('div');
 		userItem.classList.add('userItem');
@@ -55,8 +56,21 @@ function showUsersList(usersList) {
 	});
 }
 
+let deleteButton = document.querySelectorAll('.deleteButton');
 
-// loadPhoto();
+deleteButton.forEach(item => {
+	item.addEventListener('click', event => {
+		let deletedUserName = event.target.parentNode.firstChild.textContent;
+		console.log('deletedUserName ', deletedUserName);
+		console.log(usersList);
+		let deletedUser = usersList.find((user) => { return user.name === deletedUserName; }); console.log(deletedUser, ' deleted user');
 
+		let deletedUserId = usersList.indexOf(deletedUser);
+
+		usersList.splice(deletedUserId, 1);
+		localStorage.setItem('usersList', JSON.stringify(usersList));
+		showUsersList(usersList);
+	});
+});
 
 // Необходимо получить список всех пользователей с помощью бесплатного API (https://jsonplaceholder.typicode.com/users) и отобразить их на странице. Пользователь должен иметь возможность удалить любого пользователя из списка. Данные при получении необходимо сохранить в локальное хранилище браузера localStorage. При удалении пользователь должен удаляться не только со страницы, но и из локального хранилища localStorage
