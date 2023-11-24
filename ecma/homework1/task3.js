@@ -21,12 +21,12 @@ function findElementByClass(rootElement, className) {
 		console.log('have');
 		return rootElement;
 	}
-	// if (rootElement.children.length === 0) return;
+	if (rootElement.children.length === 0) return;
 
-	// for (const child of rootElement.children) {
-	// 	const el = findElementByClass(child, className);
-	// 	if (el) return el;
-	// }
+	for (const child of rootElement.children) {
+		const el = findElementByClass(child, className);
+		if (el) return el;
+	}
 }
 
 
