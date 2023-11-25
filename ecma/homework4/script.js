@@ -3,13 +3,13 @@ let usersList;
 
 if (localStorage.getItem('usersList') === null || localStorage.getItem('usersList') === undefined) {
 	// console.log('localstorage is not here');
-	loadUsers();
+	fetchUsers();
 }
 else {
 	// console.log('localstorage here');
 	usersList = JSON.parse(localStorage.getItem('usersList'));
 	if (usersList.length === 0) {
-		loadUsers();
+		fetchUsers();
 	}
 	else {
 		showUsersList(usersList);
@@ -19,19 +19,16 @@ else {
 async function fetchUsers() {
 	try {
 		const response = await fetch(`https://jsonplaceholder.typicode.com/users`);
-		const users = await response.json();
-		localStorage.setItem('usersList', JSON.stringify(users));
+		const usersList = await response.json();
+		localStorage.setItem('usersList', JSON.stringify(usersList));
 		// console.log('fetchUsers is working');
-		return users;
+		showUsersList(usersList);
+
+		return usersList;
 	} catch (error) {
 		console.error('Ошибка при загрузке фотографий:', error);
 		return [];
 	}
-}
-
-async function loadUsers() {
-	const usersList = await fetchUsers();
-	showUsersList(usersList);
 }
 
 function showUsersList(usersList) {
