@@ -1,5 +1,43 @@
 ## Задачи
 
+### [Домашнее задание 3](https://github.com/enginoevadiana/geekbrains/tree/main/js-api/homework3)
+
+#### [Задача 1](https://github.com/enginoevadiana/geekbrains/blob/main/js-api/homework3/script.js)
+
+[История](https://github.com/enginoevadiana/geekbrains/blob/main/js-api/homework3/history-script.js)
+
+- Веб-приложение, которое каждый день будет отображать новое случайное изображение из коллекции Unsplash
+	- отобразить информацию о фотографе под изображением
+	- сделать кнопку "лайк" и счетчик, каждый раз когда пользователь нажимает на кнопку, счетчик увеличивается на единицу
+	- кол-во лайков сохраняется в локальное хранилище и сохраняется при перезагрузке
+	- реализовать возможность просмотра предыдущих фото дня с сохранением их в истории просмотра
+
+### [Семинар 3](https://github.com/enginoevadiana/geekbrains/tree/main/js-api/seminar3)
+
+#### [Задача 1](https://github.com/enginoevadiana/geekbrains/blob/main/js-api/seminar3/task1.html)
+- При выборе категории товаров в выпадающем списке динамически обновляется список товаров на странице (отображаются товары с выбранной категорией)
+
+#### [Задача 2](https://github.com/enginoevadiana/geekbrains/blob/main/js-api/seminar3/task2.html)
+- Бесконечная лента с фотографиями
+##### [Вариант препода](https://github.com/enginoevadiana/geekbrains/blob/main/js-api/seminar3/task2-kadochnikov.html)
+
+### [Лекция 3](https://github.com/enginoevadiana/geekbrains/tree/main/js-api/lecture3)
+
+#### [Задача 1](https://github.com/enginoevadiana/geekbrains/blob/main/js-api/lecture3/task1.html)
+- Работа с формами. Вывод столицы при выборе страны через select
+
+#### [Задача 2](https://github.com/enginoevadiana/geekbrains/blob/main/js-api/lecture3/task2.html)
+- Сортировка товаров через select
+
+#### [Задача 3](https://github.com/enginoevadiana/geekbrains/blob/main/js-api/lecture3/task3.html)
+- Fetch
+
+#### [Задача 4](https://github.com/enginoevadiana/geekbrains/blob/main/js-api/lecture3/task4.html)
+- Fetch + json
+
+#### [Задача 5](https://github.com/enginoevadiana/geekbrains/blob/main/js-api/lecture3/task5.html)
+- Вывод данных о случайных пользователях через fetch + сортировка
+
 ### [Домашнее задание 2](https://github.com/enginoevadiana/geekbrains/tree/main/js-api/homework2-slider)
 
 #### [Задача 1](https://github.com/enginoevadiana/geekbrains/blob/main/js-api/homework2-slider/script.js)
