@@ -267,6 +267,8 @@ a {
 
 	&__product-card {
 		width: 360px;
+		display: flex;
+		flex-direction: column;
 	}
 
 	&__image {

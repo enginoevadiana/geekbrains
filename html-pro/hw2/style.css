@@ -233,6 +233,8 @@ a {
 }
 .products-catalog__product-card {
   width: 360px;
+  display: flex;
+  flex-direction: column;
 }
 .products-catalog__image {
   margin: 0;
