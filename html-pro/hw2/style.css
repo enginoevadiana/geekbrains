@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+.box-content {
+  overflow: hidden;
+}
+
 summary {
   display: block;
 }
@@ -28,6 +32,8 @@ a {
   padding: 18px 230px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  position: relative;
 }
 .header-nav__left {
   display: flex;
@@ -38,6 +44,24 @@ a {
   display: flex;
   align-items: center;
   gap: 25px;
+}
+.header-nav #burger {
+  position: absolute;
+  left: -99999999;
+  visibility: hidden;
+}
+.header-nav #burger:checked ~ .burger-nav {
+  right: 0;
+}
+.header-nav .burger-nav {
+  width: 232px;
+  padding: 32px;
+  background-color: #fff;
+  filter: drop-shadow(6px 4px 35px rgba(0, 0, 0, 0.21));
+  position: absolute;
+  top: 75px;
+  right: -232px;
+  transition: right 0.3s;
 }
 .header-nav__cart {
   margin-left: 42px;
@@ -79,6 +103,7 @@ a {
   padding-top: 39px;
   position: relative;
   display: flex;
+  gap: 30px;
 }
 
 .filter {

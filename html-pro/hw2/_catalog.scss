@@ -6,6 +6,10 @@
 	box-sizing: border-box;
 }
 
+.box-content {
+	overflow: hidden;
+}
+
 summary {
 	display: block;
 }
@@ -30,6 +34,8 @@ a {
 	padding: 18px 230px;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
+	position: relative;
 
 	&__left {
 		display: flex;
@@ -41,6 +47,28 @@ a {
 		display: flex;
 		align-items: center;
 		gap: 25px;
+	}
+
+	#burger {
+		position: absolute;
+		left: -99999999;
+		visibility: hidden;
+
+		&:checked~.burger-nav {
+			right: 0;
+		}
+	}
+
+	.burger-nav {
+		width: 232px;
+		padding: 32px;
+		background-color: #fff;
+		filter: drop-shadow(6px 4px 35px rgba(0, 0, 0, 0.21));
+		position: absolute;
+		top: 75px;
+		// right: 0;
+		right: -232px;
+		transition: right .3s;
 	}
 
 	&__cart {
@@ -88,7 +116,7 @@ a {
 	padding-top: 39px;
 	position: relative;
 	display: flex;
-	// gap: %gapGrid;
+	gap: $gapGrid;
 }
 
 .filter {
