@@ -218,4 +218,105 @@ a {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+.contacts {
+  margin-top: 128px;
+  padding: 97px 230px 162px 230px;
+  display: flex;
+  gap: 223px;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("images/contacts_back.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.contacts__left {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+.contacts__text {
+  width: 359px;
+  color: #222224;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.contacts__image {
+  width: 96px;
+  height: 96px;
+}
+.contacts__right {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+  align-items: center;
+}
+.contacts__text-right {
+  color: #222224;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.contacts__title {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+}
+.contacts__input {
+  width: 322px;
+  height: 49px;
+  background-color: #E1E1E1;
+  padding: 6px 64px 6px 22px;
+  border: none;
+  border-radius: 25px;
+  color: #222224;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.contacts__button {
+  width: 100px;
+  height: 49px;
+  background-color: #F16D7F;
+  padding: 6px 7px 6px 8px;
+  border: none;
+  border-radius: 0px 25px 25px 0px;
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: -45px;
+}
+
+.footer {
+  padding: 30px 230px 30px 235px;
+  display: flex;
+  gap: 732px;
+  align-items: center;
+  background-color: #222224;
+}
+.footer__text-left {
+  color: #FBFBFB;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.footer__right {
+  display: flex;
+  gap: 7px;
 }/*# sourceMappingURL=style.css.map */

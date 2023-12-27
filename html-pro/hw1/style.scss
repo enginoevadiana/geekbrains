@@ -248,3 +248,116 @@ a {
 		line-height: normal;
 	}
 }
+
+.contacts {
+	margin-top: 128px;
+	padding: 97px 230px 162px 230px;
+	display: flex;
+	gap: 223px;
+	justify-content: space-between;
+	align-items: center;
+	background-image: url('images/contacts_back.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	&__left {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		align-items: center;
+	}
+
+	&__text {
+		width: 359px;
+		color: #222224;
+		text-align: center;
+		font-family: $fontSite;
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+	}
+
+	&__image {
+		width: 96px;
+		height: 96px;
+	}
+
+	&__right {
+		display: flex;
+		flex-direction: column;
+		gap: 34px;
+		align-items: center;
+	}
+
+	&__text-right {
+		color: #222224;
+		text-align: center;
+		font-family: $fontSite;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+	}
+
+	&__title {
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 700;
+	}
+
+	&__input {
+		width: 322px;
+		height: 49px;
+		background-color: #E1E1E1;
+		padding: 6px 64px 6px 22px;
+		border: none;
+		border-radius: 25px;
+		color: #222224;
+		font-family: $fontSite;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+	}
+
+	&__button {
+		width: 100px;
+		height: 49px;
+		background-color: $colorSelect;
+		padding: 6px 7px 6px 8px;
+		border: none;
+		border-radius: 0px 25px 25px 0px;
+		color: #fff;
+		font-family: $fontSite;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		margin-left: -45px;
+	}
+
+}
+
+.footer {
+	padding: 30px 230px 30px 235px;
+	display: flex;
+	gap: 732px;
+	// justify-content: space-between;
+	align-items: center;
+	background-color: #222224;
+
+	&__text-left {
+		color: #FBFBFB;
+		font-family: $fontSite;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+	}
+
+	&__right {
+		display: flex;
+		gap: 7px;
+	}
+}
