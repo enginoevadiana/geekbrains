@@ -196,7 +196,7 @@ a {
   gap: 10px;
 }
 .sort__heading {
-  color: #4D4D4D;
+  color: #6F6E6E;
   font-family: "Lato", sans-serif;
   font-size: 14px;
   font-style: normal;
@@ -227,12 +227,12 @@ a {
 }
 
 .products-catalog {
-  display: flex;
+  display: grid;
+  grid-template-columns: 360px 360px 360px;
   justify-content: center;
   gap: 30px;
 }
 .products-catalog__product-card {
-  width: 360px;
   display: flex;
   flex-direction: column;
 }
@@ -273,9 +273,80 @@ a {
   line-height: normal;
 }
 
+.promotions {
+  background-color: #222224;
+  padding: 103px 230px 104px 230px;
+  margin-top: 109px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.promotions__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.promotions__image-box {
+  width: 40px;
+  height: 40px;
+}
+.promotions__title {
+  color: #FBFBFB;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.promotions__text {
+  color: #FBFBFB;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 48px 0 96px 0;
+}
+.pagination__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  border: 1px solid #EBEBEB;
+  border-radius: 10px;
+  padding: 15px 16px;
+}
+.pagination__arrow {
+  width: 8px;
+  height: 14px;
+}
+.pagination__number {
+  color: #C4C4C4;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.pagination__number-select {
+  color: #F16D7F;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
 .contacts {
-  margin-top: 128px;
-  padding: 97px 230px 162px 230px;
+  padding: 97px 327px 126px 231px;
   display: flex;
   gap: 223px;
   justify-content: space-between;
