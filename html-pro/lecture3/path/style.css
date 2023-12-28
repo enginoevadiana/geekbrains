@@ -1,0 +1,16 @@
+.item {
+	height: 400px;
+	background-color: #ccc;
+}
+
+.item1 {
+	clip-path: circle(150px at 0 200px);
+	background-image: url(https://images.unsplash.com/photo-1505506874110-6a7a69069a08?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c3RhcnxlbnwwfHwwfHx8MA%3D%3D);
+	background-size: contain;
+}
+
+.item2 {
+	clip-path: polygon(50% 10%, 12% 100%, 30% 40%, 0 25%);
+	background-image: url(https://images.unsplash.com/photo-1505118380757-91f5f5632de0?q=80&w=2452&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+	background-size: cover;
+}
