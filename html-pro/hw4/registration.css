@@ -1,0 +1,313 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.box-content {
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.center {
+  padding-left: calc(50% - 570px);
+  padding-right: calc(50% - 570px);
+}
+
+.header-nav {
+  background-color: #222;
+  width: 100%;
+  height: 75px;
+  padding: 18px 230px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.header-nav__left {
+  display: flex;
+  align-items: center;
+  gap: 41px;
+}
+.header-nav__right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.header-nav #burger {
+  position: absolute;
+  left: -99999999;
+  visibility: hidden;
+}
+.header-nav #burger:checked ~ .burger-nav {
+  right: 0;
+}
+.header-nav .burger-nav {
+  width: 232px;
+  padding: 32px;
+  background-color: #fff;
+  filter: drop-shadow(6px 4px 35px rgba(0, 0, 0, 0.21));
+  position: absolute;
+  top: 75px;
+  right: -232px;
+  transition: right 0.3s;
+}
+.header-nav__cart {
+  margin-left: 42px;
+}
+
+.header-title-box {
+  background-color: #F8F3F4;
+  width: 100%;
+  height: 148px;
+  padding: 60px 230px;
+  display: flex;
+  justify-content: space-between;
+}
+.header-title-box__title {
+  color: #F16D7F;
+  font-family: "Lato", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.registration {
+  display: flex;
+  justify-content: center;
+  margin-top: 64px;
+  margin-bottom: 96px;
+  margin-right: 230px;
+  margin-left: 230px;
+  gap: 128px;
+}
+.registration__left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.registration__label {
+  color: #222;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.registration__input {
+  width: 359px;
+  padding: 13px 0 16px 17px;
+  border: 1px solid #A4A4A4;
+  border-radius: 0;
+}
+.registration__input:hover {
+  border: 1px solid #F16D7F;
+}
+.registration__input:focus {
+  outline: 1px solid #F16D7F;
+}
+.registration__input::-moz-placeholder {
+  color: #B1B1B1;
+  font-family: "Lato", sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.registration__input::placeholder {
+  color: #B1B1B1;
+  font-family: "Lato", sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.registration__radio-box {
+  margin-top: 11px;
+  margin-bottom: 11px;
+  display: flex;
+  gap: 10px;
+}
+.registration__radio-label {
+  margin-right: 20px;
+  color: #000;
+  font-family: "Lato", sans-serif;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.registration__text {
+  width: 359px;
+  color: #B1B1B1;
+  font-family: "Lato", sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.registration__button {
+  width: 167px;
+  padding: 16px 29px 17px 29px;
+  border-radius: 0;
+  background-color: #fff;
+  border: 1px solid #A4A4A4;
+  color: #4A4A4A;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  box-sizing: content-box;
+}
+.registration__button:hover {
+  border: 1px solid #F16D7F;
+  background-color: #F16D7F;
+  color: #fff;
+}
+.registration__svg {
+  margin-left: 20px;
+}
+.registration__button .registration__svg path {
+  fill: #000;
+}
+.registration__button:hover .registration__svg path {
+  fill: #fff;
+}
+.registration__right {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  font-family: "Lato", sans-serif;
+}
+.registration__title {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.registration__description {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.registration__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.registration__list-item {
+  display: flex;
+  gap: 23px;
+}
+
+.contacts {
+  padding: 97px 327px 126px 231px;
+  display: flex;
+  gap: 223px;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("images/contacts_back.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.contacts__left {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+.contacts__text {
+  width: 359px;
+  color: #222224;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.contacts__image {
+  width: 96px;
+  height: 96px;
+}
+.contacts__right {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+  align-items: center;
+}
+.contacts__text-right {
+  color: #222224;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.contacts__title {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+}
+.contacts__input {
+  width: 322px;
+  height: 49px;
+  background-color: #E1E1E1;
+  padding: 6px 64px 6px 22px;
+  border: none;
+  border-radius: 25px;
+  color: #222224;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.contacts__input:hover {
+  border: 1px solid #F16D7F;
+}
+.contacts__input:focus {
+  outline: 1px solid #F16D7F;
+}
+.contacts__button {
+  width: 100px;
+  height: 49px;
+  background-color: #F16D7F;
+  padding: 6px 7px 6px 8px;
+  border: none;
+  border-radius: 0px 25px 25px 0px;
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: -45px;
+}
+
+.footer {
+  padding: 30px 230px 30px 235px;
+  display: flex;
+  gap: 732px;
+  align-items: center;
+  background-color: #222224;
+}
+.footer__text-left {
+  color: #FBFBFB;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.footer__right {
+  display: flex;
+  gap: 7px;
+}/*# sourceMappingURL=registration.css.map */
