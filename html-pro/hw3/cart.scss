@@ -10,14 +10,6 @@
 	overflow: hidden;
 }
 
-summary {
-	display: block;
-}
-
-summary::-webkit-details-marker {
-	display: none;
-}
-
 a {
 	text-decoration: none;
 }
@@ -92,211 +84,106 @@ a {
 		font-weight: 400;
 		line-height: normal;
 	}
-
-	&__breadcrumbs {
-		color: $colorUnselect;
-		font-family: $fontSite;
-		font-size: 14px;
-		font-style: normal;
-		font-weight: 300;
-		line-height: normal;
-	}
-
-	&__links {
-		color: $colorUnselect;
-	}
-
-	&__links-selected {
-		color: $colorSelect;
-	}
 }
 
-.filter-sort {
-	height: 132px;
-	padding-top: 39px;
-	position: relative;
+.cart-left {
 	display: flex;
-	gap: $gapGrid;
+	flex-direction: column;
+	align-items: center;
+	gap: 72px;
 }
 
-.filter {
-	width: 360px;
-	padding-top: 13px;
-	position: relative;
-	// z-index: 10;
+.cart {
+	margin: 96px 0 128px 0;
+	display: flex;
+	justify-content: center;
+	gap: 129px;
 
-	&[open] {
-		background-color: #FFF;
-		filter: drop-shadow(6px 4px 35px rgba(0, 0, 0, 0.21));
-	}
-
-	&[open] .filter__heading {
-		color: $colorSelect;
-	}
-
-	&[open] path {
-		fill: $colorSelect;
-	}
-
-	&__summary {
-		display: flex;
-		padding: 0 16px 16px 16px;
-		align-items: center;
-		gap: 11px;
-	}
-
-	&__heading {
-		color: $colorSimpleText;
-		font-family: $fontSite;
-		font-size: 14px;
-		font-style: normal;
-		font-weight: 600;
-		line-height: normal;
-	}
-
-	&__content {
-		background-color: #fff;
-		padding: 0 16px 16px 16px;
-	}
-
-	&__item {
-		margin-top: 16px;
-		color: $colorUnselect;
-		font-family: $fontSite;
-		font-size: 14px;
-		font-style: normal;
-		font-weight: 400;
-		line-height: normal;
-	}
-
-	&__title {
-		color: $colorUnselect;
-		font-family: $fontSite;
-		font-size: 14px;
-		font-style: normal;
-		font-weight: 400;
-		line-height: normal;
-		padding: 8px 11px 11px 11px;
-		border-bottom: 1px solid $colorGrayLight;
-		border-left: 5px solid $colorSelect;
-	}
-
-	&__item[open] .filter__title {
-		color: $colorSelect;
-	}
-
-	&__link-box {
+	&__products {
 		display: flex;
 		flex-direction: column;
-		gap: 11px;
-		padding-top: 24px;
-		padding-bottom: 24px;
-		padding-left: 16px;
-	}
-
-	&__link {
-		color: $colorUnselect;
-		font-family: $fontSite;
-		font-size: 14px;
-		font-style: normal;
-		font-weight: 400;
-		line-height: normal;
-
-		&:hover {
-			color: $colorSelect;
-		}
-	}
-
-}
-
-.sort {
-	padding-top: 12px;
-	display: flex;
-	gap: 18px;
-
-	&__details {
-		position: relative;
-	}
-
-	&__summary {
-		display: flex;
 		align-items: center;
-		gap: 10px;
+		gap: 40px;
 	}
 
-	&__heading {
-		color: #6F6E6E;
-		font-family: $fontSite;
-		font-size: 14px;
-		font-style: normal;
-		font-weight: 400;
-		line-height: normal;
+	&__product-card {
+		width: 652px;
+		display: flex;
+		filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
 	}
 
-	&__box {
+	&__product-image {
+		width: 262px;
+	}
+
+	&__description {
+		width: 390px;
 		display: flex;
 		flex-direction: column;
 		gap: 6px;
 		background: #FFF;
-		box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
-		padding: 7px 30px 11px 9px;
-		position: absolute;
-		left: -9px;
-		top: 20px;
-		// margin-left: -9px;
-		// margin-top: 5px;
+		padding: 22px 22px 62px 31px;
 	}
 
-	&__check {
+	&__description-header {
 		display: flex;
-		align-items: center;
-		gap: 9px;
-		color: #6F6E6E;
-		font-family: Roboto;
-		font-size: 14px;
-		font-style: normal;
-		font-weight: 400;
-		line-height: normal;
-	}
-}
-
-.products-catalog {
-	// display: flex;
-	display: grid;
-	grid-template-columns: 360px 360px 360px;
-	justify-content: center;
-	gap: 30px;
-
-	&__product-card {
-		// width: 360px;
-		display: flex;
-		flex-direction: column;
-	}
-
-	&__image {
-		margin: 0;
-	}
-
-	&__description {
-		display: flex;
-		flex-direction: column;
-		gap: 12px;
-		margin: 0;
-		padding: 24px 28px 20px 18px;
-		background-color: $colorBackground2;
+		justify-content: space-between;
 	}
 
 	&__title {
-		color: $colorSimpleText;
+		padding-right: 120px;
+		margin-bottom: 36px;
+		color: #222;
 		font-family: $fontSite;
-		font-size: 13px;
+		font-size: 24px;
 		font-style: normal;
 		font-weight: 400;
 		line-height: normal;
 	}
 
+	&__close:hover .cart__path {
+		fill: $colorSelect;
+	}
+
 	&__text {
-		color: $colorGray4;
+		color: #575757;
+		font-family: $fontSite;
+		font-size: 22px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+	}
+
+	&__text-selected {
+		color: #EF5B70;
+	}
+
+	&__text-input {
+		width: 44px;
+		color: #656565;
+		font-family: $fontSite;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		padding-left: 15px;
+		margin-left: 24px;
+		border: 1px solid #EAEAEA;
+		border-radius: 0;
+	}
+
+	&__buttons {
+		width: 652px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__button {
+		padding: 17px 41px 16px 39px;
+		border: 1px solid #A4A4A4;
+		border-radius: 0;
+		background-color: #fff;
+		color: #000;
 		font-family: $fontSite;
 		font-size: 14px;
 		font-style: normal;
@@ -304,94 +191,124 @@ a {
 		line-height: normal;
 	}
 
-	&__price {
-		margin-top: 6px;
-		color: $colorSelect;
-		font-family: $fontSite;
-		font-size: 16px;
-		font-style: normal;
-		font-weight: 400;
-		line-height: normal;
+	&__button:hover {
+		background-color: $colorSelect;
+		color: white;
+		border: 1px solid $colorSelect;
 	}
-}
 
-.promotions {
-	background-color: #222224;
-	padding: 103px 230px 104px 230px;
-	margin-top: 109px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 30px;
-
-	&__item {
+	&__ship-form {
+		margin-top: 15px;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
-		gap: 16px;
-	}
-
-	&__image-box {
-		width: 40px;
-		height: 40px;
-	}
-
-	&__title {
-		color: #FBFBFB;
+		gap: 20px;
 		font-family: $fontSite;
-		font-size: 20px;
+		font-style: normal;
+		font-weight: 300;
+		line-height: normal;
+	}
+
+	&__ship-title {
+		color: #222;
+		font-size: 16px;
+	}
+
+	&__input-box {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	&__ship-input {
+		width: 358px;
+		padding: 13px 0 13px 17px;
+		border: 1px solid #A4A4A4;
+		border-radius: 0;
+		background-color: #fff;
+		color: #222;
+	}
+
+	&__ship-input::placeholder {
+		color: #B1B1B1;
+	}
+
+	&__ship-button {
+		width: 102px;
+		padding: 10px 14px 12px 15px;
+		border: 1px solid #A4A4A4;
+		border-radius: 0;
+		background-color: #fff;
+		color: #4A4A4A;
+		font-size: 11px;
+		box-sizing: content-box;
+	}
+
+	&__ship-button:hover {
+		background-color: $colorSelect;
+		color: white;
+		border: 1px solid $colorSelect;
+	}
+
+	&__total {
+		width: 360px;
+		padding: 39px 34px 42px 44px;
+		background-color: #F5F3F3;
+		margin-top: 65px;
+		display: flex;
+		flex-direction: column;
+		align-items: end;
+	}
+
+	&__sub {
+		color: #4A4A4A;
+		font-family: $fontSite;
+		font-size: 11px;
 		font-style: normal;
 		font-weight: 400;
 		line-height: normal;
 	}
 
-	&__text {
-		color: #FBFBFB;
-		text-align: center;
-		font-family: $fontSite;
-		font-size: 14px;
-		font-style: normal;
-		font-weight: 300;
-		line-height: normal;
-	}
-}
-
-.pagination {
-	display: flex;
-	justify-content: center;
-	margin: 48px 0 96px 0;
-
-	&__box {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		gap: 16px;
-		border: 1px solid #EBEBEB;
-		border-radius: 10px;
-		padding: 15px 16px;
+	&__sub-selected {
+		margin-left: 20px;
 	}
 
-	&__arrow {
-		width: 8px;
-		height: 14px;
-	}
-
-	&__number {
-		color: #C4C4C4;
-		font-family: $fontSite;
-		font-size: 16px;
-		font-style: normal;
-		font-weight: 300;
-		line-height: normal;
-	}
-
-	&__number-select {
+	&__sub-selected:hover {
 		color: $colorSelect;
+	}
+
+	&__grand {
+		margin-top: 12px;
+		margin-bottom: 21px;
+		color: #222;
 		font-family: $fontSite;
 		font-size: 16px;
 		font-style: normal;
 		font-weight: 300;
 		line-height: normal;
+	}
+
+	&__grand-selected {
+		margin-left: 20px;
+	}
+
+	&__grand-selected:hover {
+		color: $colorSelect;
+	}
+
+
+	&__total-button {
+		margin-top: 17px;
+		border: 1px solid #A4A4A4;
+		border-radius: 0;
+		background-color: #fff;
+		padding: 15px 43px 16px 41px;
+		color: #4A4A4A;
+	}
+
+	&__total-button:hover {
+		background-color: $colorSelect;
+		color: white;
+		border: 1px solid $colorSelect;
 	}
 }
 
