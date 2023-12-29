@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cart</title>
+	<link rel="stylesheet" href="cart.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<header>
+		<nav class="header-nav">
+			<div class="header-nav__left">
+				<a href="index.html" class="header-nav__link"><img src="images/logo.png" alt="" class="header-nav__img"></a>
+				<a href="catalog.html" class="header-nav__link"><img src="images/find.png" alt="" class="header-nav__img"></a>
+			</div>
+			<div class="header-nav__right">
+				<a href="#" class="header-nav__link"><img src="images/burger.png" alt="" class="header-nav__img"></a>
+				<a href="registration.html" class="header-nav__link"><img src="images/user.png" alt=""
+						class="header-nav__img"></a>
+				<a href="cart.html" class="header-nav__link header-nav__cart"><img src="images/cart.png" alt=""
+						class="header-nav__img"></a>
+			</div>
+		</nav>
+
+		<div class="header-title-box">
+			<p class="header-title-box__title">SHOPPING CART</p>
+		</div>
+	</header>
+
+	<main>
+
+		<div class="cart">
+			<div class="cart-left">
+				<div class="cart__products">
+					<div class="cart__product-card">
+						<img src="images/product3.png" class="cart__product-image">
+						<div class="cart__description">
+							<div class="cart__description-header">
+								<p class="cart__title">MANGO PEOPLE T-SHIRT</p>
+								<div class="cart__close">
+									<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path class="cart__path"
+											d="M11.2453 9L17.5302 2.71516C17.8285 2.41741 17.9962 2.01336 17.9966 1.59191C17.997 1.17045 17.8299 0.76611 17.5322 0.467833C17.2344 0.169555 16.8304 0.00177586 16.4089 0.00140366C15.9875 0.00103146 15.5831 0.168097 15.2848 0.465848L9 6.75069L2.71516 0.465848C2.41688 0.167571 2.01233 0 1.5905 0C1.16868 0 0.764125 0.167571 0.465848 0.465848C0.167571 0.764125 0 1.16868 0 1.5905C0 2.01233 0.167571 2.41688 0.465848 2.71516L6.75069 9L0.465848 15.2848C0.167571 15.5831 0 15.9877 0 16.4095C0 16.8313 0.167571 17.2359 0.465848 17.5342C0.764125 17.8324 1.16868 18 1.5905 18C2.01233 18 2.41688 17.8324 2.71516 17.5342L9 11.2493L15.2848 17.5342C15.5831 17.8324 15.9877 18 16.4095 18C16.8313 18 17.2359 17.8324 17.5342 17.5342C17.8324 17.2359 18 16.8313 18 16.4095C18 15.9877 17.8324 15.5831 17.5342 15.2848L11.2453 9Z"
+											fill="#575757" />
+									</svg>
+								</div>
+							</div>
+							<p class="cart__text">
+								Price:
+								<span class="cart__text-selected">$300</span>
+							</p>
+							<p class="cart__text">
+								Color:
+								<span>Red</span>
+							</p>
+							<p class="cart__text">
+								Size:
+								<span>Xl</span>
+							</p>
+							<p class="cart__text">
+								Quantity:
+								<input class="cart__text-input" type="number" value="2">
+							</p>
+						</div>
+					</div>
+					<div class="cart__product-card">
+						<img src="images/product2.png" class="cart__product-image">
+						<div class="cart__description">
+							<div class="cart__description-header">
+								<p class="cart__title">MANGO PEOPLE T-SHIRT</p>
+								<div class="cart__close">
+									<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path class="cart__path"
+											d="M11.2453 9L17.5302 2.71516C17.8285 2.41741 17.9962 2.01336 17.9966 1.59191C17.997 1.17045 17.8299 0.76611 17.5322 0.467833C17.2344 0.169555 16.8304 0.00177586 16.4089 0.00140366C15.9875 0.00103146 15.5831 0.168097 15.2848 0.465848L9 6.75069L2.71516 0.465848C2.41688 0.167571 2.01233 0 1.5905 0C1.16868 0 0.764125 0.167571 0.465848 0.465848C0.167571 0.764125 0 1.16868 0 1.5905C0 2.01233 0.167571 2.41688 0.465848 2.71516L6.75069 9L0.465848 15.2848C0.167571 15.5831 0 15.9877 0 16.4095C0 16.8313 0.167571 17.2359 0.465848 17.5342C0.764125 17.8324 1.16868 18 1.5905 18C2.01233 18 2.41688 17.8324 2.71516 17.5342L9 11.2493L15.2848 17.5342C15.5831 17.8324 15.9877 18 16.4095 18C16.8313 18 17.2359 17.8324 17.5342 17.5342C17.8324 17.2359 18 16.8313 18 16.4095C18 15.9877 17.8324 15.5831 17.5342 15.2848L11.2453 9Z"
+											fill="#575757" />
+									</svg>
+								</div>
+							</div>
+							<p class="cart__text">
+								Price:
+								<span class="cart__text-selected">$300</span>
+							</p>
+							<p class="cart__text">
+								Color:
+								<span>Red</span>
+							</p>
+							<p class="cart__text">
+								Size:
+								<span>Xl</span>
+							</p>
+							<p class="cart__text">
+								Quantity:
+								<input class="cart__text-input" type="number" value="2">
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="cart__buttons">
+					<button class="cart__button">
+						CLEAR SHOPPING CART
+					</button>
+					<button class="cart__button">
+						CONTINUE SHOPPING
+					</button>
+				</div>
+			</div>
+			<div class="cart-right">
+				<div class="cart__ship-form">
+					<p class="cart__ship-title">SHIPPING ADRESS</p>
+					<div class="cart__input-box">
+						<input type="text" class="cart__ship-input" placeholder="Bangladesh">
+						<input type="text" class="cart__ship-input" value="State">
+						<input type="text" class="cart__ship-input" value="Postcode / Zip">
+						<button class="cart__ship-button">GET A QUOTE</button>
+					</div>
+				</div>
+
+				<div class="cart__total">
+					<p class="cart__sub">SUB TOTAL <span class="cart__sub-selected">$900</span></p>
+					<p class="cart__grand">GRAND TOTAL <span class="cart__grand-selected">$900</span></p>
+					<svg width="275" height="1" viewBox="0 0 275 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M275 0H0V1H275V0Z" fill="#E2E2E2" />
+					</svg>
+
+					<button class="cart__total-button">PROCEED TO CHECKOUT</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="contacts">
+			<div class="contacts__left">
+				<img src="images/avatar.png" alt="" class="contacts__image">
+				<p class="contacts__text">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, <i>a pulvinar purus
+						condimentum</i>“
+				</p>
+			</div>
+			<div class="contacts__right">
+				<div class="contacts__text-right">
+					<p class="contacts__title">
+						SUBSCRIBE
+					</p>
+					<p class="contacts__subtitle">
+						FOR OUR NEWLETTER AND PROMOTION
+					</p>
+				</div>
+				<div class="contacts__subscribe">
+					<input type="text" class="contacts__input" placeholder="Enter Your Email">
+					<button class="contacts__button">Subscribe</button>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer class="footer">
+		<div class="footer__left">
+			<p class="footer__text-left">
+				© 2023 Brand All Rights Reserved.
+			</p>
+		</div>
+		<div class="footer__right">
+			<img src="images/pinterest.png" alt="" class="footer__logo">
+			<img src="images/twitter.png" alt="" class="footer__logo">
+		</div>
+	</footer>
+</body>
+
+</html>
+
+<!-- ЗАДАНИЕ
+Создать страницу корзины
+https://www.figma.com/file/TQaPa1gzsX6Qb4Gqj4fve7/Shop-(Copy)?node-id=73%3A140&mode=dev
+-->

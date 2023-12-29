@@ -1,0 +1,322 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.center {
+  padding-left: calc(50% - 570px);
+  padding-right: calc(50% - 570px);
+}
+
+.header-nav {
+  background-color: #222;
+  width: 100%;
+  height: 75px;
+  padding: 18px 230px;
+  display: flex;
+  justify-content: space-between;
+}
+.header-nav__left {
+  display: flex;
+  align-items: center;
+  gap: 41px;
+}
+.header-nav__right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.header-nav__cart {
+  margin-left: 42px;
+}
+
+.header-title-box {
+  background-color: #F8F3F4;
+  width: 100%;
+  height: 148px;
+  padding: 60px 230px;
+  display: flex;
+  justify-content: space-between;
+}
+.header-title-box__title {
+  color: #F16D7F;
+  font-family: "Lato", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.header-title-box__breadcrumbs {
+  color: #636363;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.header-title-box__links {
+  color: #636363;
+}
+.header-title-box__links-selected {
+  color: #F16D7F;
+}
+
+.main-mainproduct {
+  width: 100%;
+}
+.main-mainproduct__image-box {
+  background-color: #F7F7F7;
+  height: 777px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-mainproduct__link {
+  background-color: rgba(42, 42, 42, 0.15);
+  padding: 8px;
+}
+.main-mainproduct__arrow {
+  width: 31px;
+  height: 31px;
+}
+.main-mainproduct__description-box {
+  width: 1140px;
+  height: 600px;
+  background-color: #fff;
+  border: 1px solid #EAEAEA;
+  position: relative;
+  top: -50px;
+  padding: 64px 292px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-left: calc(50% - 570px);
+  margin-right: calc(50% - 570px);
+}
+.main-mainproduct__subtitle {
+  color: #F16D7F;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.main-mainproduct__pinkline {
+  width: 63px;
+  height: 3px;
+}
+.main-mainproduct__title {
+  color: #4D4D4D;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.main-mainproduct__text {
+  margin-top: 36px;
+  color: #5E5E5E;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-align: center;
+}
+.main-mainproduct__price {
+  margin-top: 20px;
+  color: #F16D7F;
+  font-family: "Lato", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.main-mainproduct__grayline {
+  margin-top: 53px;
+  width: 641px;
+}
+.main-mainproduct__select-container {
+  margin-top: 53px;
+  display: flex;
+  gap: 7px;
+}
+.main-mainproduct__select {
+  border: none;
+  color: #6F6E6E;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.main-mainproduct__button {
+  margin-top: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 23px;
+  border: 2px solid #F16D7F;
+  border-radius: 0;
+  padding: 15px 57px 9px 24px;
+  background-color: #fff;
+  color: #F16D7F;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.products-catalog {
+  margin-top: 79px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.products-catalog__product-card {
+  width: 360px;
+}
+.products-catalog__image {
+  margin: 0;
+}
+.products-catalog__description {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 24px 28px 20px 18px;
+  background-color: #F8F8F8;
+}
+.products-catalog__title {
+  color: #000000;
+  font-family: "Lato", sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.products-catalog__text {
+  color: #5D5D5D;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.products-catalog__price {
+  margin-top: 6px;
+  color: #F16D7F;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.contacts {
+  margin-top: 128px;
+  padding: 97px 230px 162px 230px;
+  display: flex;
+  gap: 223px;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("images/contacts_back.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.contacts__left {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+.contacts__text {
+  width: 359px;
+  color: #222224;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.contacts__image {
+  width: 96px;
+  height: 96px;
+}
+.contacts__right {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+  align-items: center;
+}
+.contacts__text-right {
+  color: #222224;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.contacts__title {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+}
+.contacts__input {
+  width: 322px;
+  height: 49px;
+  background-color: #E1E1E1;
+  padding: 6px 64px 6px 22px;
+  border: none;
+  border-radius: 25px;
+  color: #222224;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.contacts__button {
+  width: 100px;
+  height: 49px;
+  background-color: #F16D7F;
+  padding: 6px 7px 6px 8px;
+  border: none;
+  border-radius: 0px 25px 25px 0px;
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: -45px;
+}
+
+.footer {
+  padding: 30px 230px 30px 235px;
+  display: flex;
+  gap: 732px;
+  align-items: center;
+  background-color: #222224;
+}
+.footer__text-left {
+  color: #FBFBFB;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.footer__right {
+  display: flex;
+  gap: 7px;
+}/*# sourceMappingURL=product.css.map */
