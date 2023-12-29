@@ -260,6 +260,20 @@ a {
 		margin: 0;
 	}
 
+	// &__image-hover {
+	// 	display: none;
+	// }
+
+	// &__product-card:hover &__image {
+	// 	display: none;
+	// }
+
+	// &__product-card:hover &__image-hover {
+	// 	display: block;
+	// 	opacity: 0.86;
+	// 	background-image: url(images/product1.png);
+	// }
+
 	&__description {
 		display: flex;
 		flex-direction: column;
