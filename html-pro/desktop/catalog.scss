@@ -69,6 +69,45 @@ a {
 		// right: 0;
 		right: -232px;
 		transition: right .3s;
+
+		&__title {
+			color: #000;
+			font-family: $fontSite;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: normal;
+		}
+
+		&__details {
+			margin-top: 24px;
+		}
+
+		&__details-title {
+			color: #F16D7F;
+			font-family: $fontSite;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+		}
+
+		&__link-box {
+			margin-top: 12px;
+			display: flex;
+			flex-direction: column;
+			gap: 11px;
+			font-family: $fontSite;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			margin-left: 22px;
+		}
+
+		&__link-box a {
+			color: #6F6E6E;
+		}
 	}
 
 	&__cart {

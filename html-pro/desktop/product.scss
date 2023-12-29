@@ -10,6 +10,18 @@ a {
 	text-decoration: none;
 }
 
+.box-content {
+	overflow: hidden;
+}
+
+summary {
+	display: block;
+}
+
+summary::-webkit-details-marker {
+	display: none;
+}
+
 .center {
 	padding-left: calc(50% - $widthSite / 2);
 	padding-right: calc(50% - $widthSite / 2);
@@ -22,6 +34,8 @@ a {
 	padding: 18px 230px;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
+	position: relative;
 
 	&__left {
 		display: flex;
@@ -33,6 +47,67 @@ a {
 		display: flex;
 		align-items: center;
 		gap: 25px;
+	}
+
+	#burger {
+		position: absolute;
+		left: -99999999;
+		visibility: hidden;
+
+		&:checked~.burger-nav {
+			right: 0;
+		}
+	}
+
+	.burger-nav {
+		width: 232px;
+		padding: 32px;
+		background-color: #fff;
+		filter: drop-shadow(6px 4px 35px rgba(0, 0, 0, 0.21));
+		position: absolute;
+		top: 75px;
+		// right: 0;
+		right: -232px;
+		transition: right .3s;
+
+		&__title {
+			color: #000;
+			font-family: $fontSite;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: normal;
+		}
+
+		&__details {
+			margin-top: 24px;
+		}
+
+		&__details-title {
+			color: #F16D7F;
+			font-family: $fontSite;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+		}
+
+		&__link-box {
+			margin-top: 12px;
+			display: flex;
+			flex-direction: column;
+			gap: 11px;
+			font-family: $fontSite;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			margin-left: 22px;
+		}
+
+		&__link-box a {
+			color: #6F6E6E;
+		}
 	}
 
 	&__cart {

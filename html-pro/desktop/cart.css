@@ -17,6 +17,18 @@ a {
   padding-right: calc(50% - 570px);
 }
 
+.box-content {
+  overflow: hidden;
+}
+
+summary {
+  display: block;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
 .header-nav {
   background-color: #222;
   width: 100%;
@@ -54,6 +66,40 @@ a {
   top: 75px;
   right: -232px;
   transition: right 0.3s;
+}
+.header-nav .burger-nav__title {
+  color: #000;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.header-nav .burger-nav__details {
+  margin-top: 24px;
+}
+.header-nav .burger-nav__details-title {
+  color: #F16D7F;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.header-nav .burger-nav__link-box {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 22px;
+}
+.header-nav .burger-nav__link-box a {
+  color: #6F6E6E;
 }
 .header-nav__cart {
   margin-left: 42px;
