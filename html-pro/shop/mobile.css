@@ -92,6 +92,20 @@
   .registration {
     flex-direction: column;
   }
+  .filter {
+    width: auto;
+  }
+  .filter__heading {
+    display: none;
+  }
+  .filter__svg {
+    transform: scale(2.4);
+  }
+  .filter-sort {
+    justify-content: space-between;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
   .main-mainproduct__image-box {
     height: 624px;
     background-image: url(images/product-main.png);

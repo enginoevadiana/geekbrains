@@ -124,6 +124,24 @@
 		flex-direction: column;
 	}
 
+	.filter {
+		width: auto;
+
+		&__heading {
+			display: none;
+		}
+
+		&__svg {
+			transform: scale(2.4);
+		}
+	}
+
+	.filter-sort {
+		justify-content: space-between;
+		padding-left: 8px;
+		padding-right: 8px;
+	}
+
 	.main-mainproduct {
 		&__image-box {
 			height: 624px;
