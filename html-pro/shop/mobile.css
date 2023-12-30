@@ -1,0 +1,62 @@
+@media (max-width: 768px) {
+  .none-mobile {
+    display: none;
+  }
+  .about__description {
+    width: 100%;
+    padding: 148px 56px;
+    justify-content: center;
+  }
+  .about__title {
+    font-size: 38px;
+  }
+  .about__text {
+    font-size: 20px;
+  }
+  .categories {
+    margin: 64px 16px;
+  }
+  .categories__clothing {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .categories__card {
+    width: 343px;
+    height: 247px;
+  }
+  .categories__accesories {
+    width: 343px;
+    height: 111px;
+  }
+  .products-catalog {
+    grid-template-columns: 360px;
+  }
+  .promotions {
+    padding: 48px 13px 81px 14px;
+  }
+  .contacts {
+    gap: 59px;
+    padding: 64px 0 109px 0;
+  }
+  .contacts__text {
+    font-size: 18px;
+  }
+  .contacts__subtitle {
+    font-size: 14px;
+  }
+  .contacts__input {
+    width: 308px;
+  }
+  .contacts__button {
+    margin-left: -100px;
+  }
+  .footer {
+    flex-direction: column;
+    gap: 40px;
+    padding-top: 43px;
+    padding-bottom: 9px;
+  }
+  .footer__right {
+    order: -1;
+  }
+}/*# sourceMappingURL=mobile.css.map */
