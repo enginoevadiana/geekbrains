@@ -65,6 +65,19 @@
     gap: 16px;
     justify-content: center;
   }
+  .registration {
+    margin: 40px 16px 96px 16px;
+    gap: 22px;
+  }
+  .registration__title {
+    font-size: 16px;
+  }
+  .registration__description {
+    font-size: 16px;
+  }
+  .registration__list-item {
+    font-size: 16px;
+  }
   .promotions {
     flex-direction: column;
     padding: 48px 204px 64px 204px;
