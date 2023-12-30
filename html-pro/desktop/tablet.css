@@ -60,8 +60,10 @@
     height: 116px;
   }
   .products-catalog {
+    display: grid;
     grid-template-columns: 360px 360px;
     gap: 16px;
+    justify-content: center;
   }
   .promotions {
     flex-direction: column;
