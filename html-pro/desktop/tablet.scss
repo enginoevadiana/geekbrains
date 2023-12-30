@@ -11,9 +11,43 @@
 		padding: 59px 16px;
 	}
 
+	.cart {
+		flex-direction: column;
+		margin: 59px 18px 62px 18px;
+
+		&__product-card {
+			width: 734px;
+		}
+
+		&__description {
+			width: 472px;
+		}
+
+		&__buttons {
+			width: auto;
+			gap: 48px;
+		}
+
+		&__button {
+			width: 235px;
+		}
+
+		&__ship-form {
+			margin-top: 0;
+		}
+
+		&__total {
+			margin-top: 39px;
+		}
+	}
+
+	.cart-right {
+		display: flex;
+		gap: 15px;
+	}
+
 	.filter-sort {
-		padding: 24px 16px 40px 16px;
-		justify-content: space-between;
+		padding: 24px 0 40px 0;
 		height: auto;
 	}
 

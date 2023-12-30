@@ -5,9 +5,35 @@
   .header-title-box {
     padding: 59px 16px;
   }
+  .cart {
+    flex-direction: column;
+    margin: 59px 18px 62px 18px;
+  }
+  .cart__product-card {
+    width: 734px;
+  }
+  .cart__description {
+    width: 472px;
+  }
+  .cart__buttons {
+    width: auto;
+    gap: 48px;
+  }
+  .cart__button {
+    width: 235px;
+  }
+  .cart__ship-form {
+    margin-top: 0;
+  }
+  .cart__total {
+    margin-top: 39px;
+  }
+  .cart-right {
+    display: flex;
+    gap: 15px;
+  }
   .filter-sort {
-    padding: 24px 16px 40px 16px;
-    justify-content: space-between;
+    padding: 24px 0 40px 0;
     height: auto;
   }
   .about__image {
