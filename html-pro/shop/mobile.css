@@ -89,6 +89,9 @@
   .cart-right {
     justify-content: center;
   }
+  .registration {
+    flex-direction: column;
+  }
   .main-mainproduct__image-box {
     height: 624px;
     background-image: url(images/product-main.png);

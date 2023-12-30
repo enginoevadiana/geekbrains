@@ -120,6 +120,10 @@
 		justify-content: center;
 	}
 
+	.registration {
+		flex-direction: column;
+	}
+
 	.main-mainproduct {
 		&__image-box {
 			height: 624px;
