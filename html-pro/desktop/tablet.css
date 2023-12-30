@@ -2,6 +2,14 @@
   .header-nav {
     padding: 18px 41px 18px 32px;
   }
+  .header-title-box {
+    padding: 59px 16px;
+  }
+  .filter-sort {
+    padding: 24px 16px 40px 16px;
+    justify-content: space-between;
+    height: auto;
+  }
   .about__image {
     width: 50%;
   }
