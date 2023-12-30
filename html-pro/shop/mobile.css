@@ -2,6 +2,11 @@
   .none-mobile {
     display: none;
   }
+  .header-title-box {
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 83px 46px 83px;
+  }
   .about__description {
     width: 100%;
     padding: 148px 56px;
@@ -30,6 +35,35 @@
   }
   .products-catalog {
     grid-template-columns: 360px;
+  }
+  .main-mainproduct__image-box {
+    height: 624px;
+    background-image: url(images/product-main.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0 50px;
+  }
+  .main-mainproduct__main-img {
+    display: none;
+  }
+  .main-mainproduct__description-box {
+    width: auto;
+    height: auto;
+    position: static;
+    padding: 64px 24px;
+    border: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .main-mainproduct__grayline {
+    width: 175px;
+    margin-top: 20px;
+  }
+  .main-mainproduct__select-container {
+    margin-top: 38px;
+  }
+  .main-mainproduct__button {
+    margin-top: 52px;
   }
   .promotions {
     padding: 48px 13px 81px 14px;

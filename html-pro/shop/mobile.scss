@@ -7,6 +7,12 @@
 		display: none;
 	}
 
+	.header-title-box {
+		flex-direction: column;
+		align-items: center;
+		padding: 24px 83px 46px 83px;
+	}
+
 	.about {
 
 		&__description {
@@ -45,6 +51,44 @@
 
 	.products-catalog {
 		grid-template-columns: 360px;
+	}
+
+	.main-mainproduct {
+		&__image-box {
+			height: 624px;
+			background-image: url(images/product-main.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: 0 50px;
+		}
+
+		&__main-img {
+			display: none;
+		}
+
+		&__description-box {
+			width: auto;
+			height: auto;
+			position: static;
+			padding: 64px 24px;
+			border: none;
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		&__grayline {
+			width: 175px;
+			margin-top: 20px;
+		}
+
+		&__select-container {
+			margin-top: 38px;
+		}
+
+		&__button {
+			margin-top: 52px;
+		}
+
 	}
 
 	.promotions {
