@@ -274,16 +274,35 @@ summary::-webkit-details-marker {
 
 .products-catalog {
 	margin-top: 79px;
-	display: flex;
+	display: grid;
+	grid-template-columns: 360px 360px;
 	justify-content: center;
 	gap: 30px;
 
 	&__product-card {
-		width: 360px;
+		// width: 360px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__img-box {
+		position: relative;
 	}
 
 	&__image {
-		margin: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	&__img-box:hover::after {
+		content: ' ';
+		background-image: url('images/hover.png');
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		// background-size: cover;
 	}
 
 	&__description {

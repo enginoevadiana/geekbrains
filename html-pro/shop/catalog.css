@@ -270,8 +270,21 @@ a {
   display: flex;
   flex-direction: column;
 }
+.products-catalog__img-box {
+  position: relative;
+}
 .products-catalog__image {
-  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+.products-catalog__img-box:hover::after {
+  content: " ";
+  background-image: url("images/hover.png");
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 .products-catalog__description {
   display: flex;
