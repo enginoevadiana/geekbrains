@@ -125,11 +125,20 @@ a {
   font-weight: 300;
   line-height: normal;
 }
-.header-title-box__links {
-  color: #636363;
+.header-title-box__breadcrumbs_ul {
+  list-style-type: none;
+  display: flex;
 }
-.header-title-box__links-selected {
+.header-title-box__breadcrumbs_li:not(:last-child)::after {
+  content: "/";
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.header-title-box__breadcrumbs_li:last-child .header-title-box__breadcrumbs_link {
   color: #F16D7F;
+}
+.header-title-box__breadcrumbs_link {
+  color: #636363;
 }
 
 .filter-sort {

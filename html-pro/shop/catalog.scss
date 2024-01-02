@@ -139,14 +139,25 @@ a {
 		font-style: normal;
 		font-weight: 300;
 		line-height: normal;
-	}
 
-	&__links {
-		color: $colorUnselect;
-	}
+		&_ul {
+			list-style-type: none;
+			display: flex;
+		}
 
-	&__links-selected {
-		color: $colorSelect;
+		&_li:not(:last-child)::after {
+			content: '/';
+			padding-left: 8px;
+			padding-right: 8px;
+		}
+
+		&_li:last-child &_link {
+			color: $colorSelect;
+		}
+
+		&_link {
+			color: $colorUnselect;
+		}
 	}
 }
 
