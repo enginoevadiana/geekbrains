@@ -29,6 +29,8 @@ text .heading {
 	}
 }
 
+/* FLEX */
+
 .content {
 	display: flex;
 	flex-wrap: wrap;
@@ -52,3 +54,25 @@ text .heading {
 /* .item_3 {
 	flex-shrink: 2;
 } */
+
+/* GRID */
+
+.grid {
+	display: grid;
+	/* grid-template-columns: repeat(auto-fit, 200px); */
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	justify-content: center;
+	margin-top: 50px;
+	gap: 16px;
+	grid-auto-flow: dense;
+}
+
+.box {
+	border: 1px solid black;
+	min-height: 100px;
+}
+
+.box_3 {
+	grid-column: span 2;
+	grid-row: span 2;
+}
