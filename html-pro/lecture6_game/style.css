@@ -1,0 +1,11 @@
+html {
+	counter-reset: count;
+}
+
+.duck-check:checked {
+	counter-increment: count;
+}
+
+.counter-info::before {
+	content: counter(count);
+}
