@@ -1,11 +1,115 @@
+@charset "UTF-8";
+@keyframes duck-fly-1 {
+  0% {
+    left: -150px;
+    top: 38vh;
+  }
+  50% {
+    left: 13vw;
+    top: 75vh;
+  }
+  100% {
+    left: 100vw;
+    top: 73vh;
+  }
+}
+@keyframes duck-fly-2 {
+  0% {
+    left: -150px;
+    top: 48vh;
+  }
+  50% {
+    left: 53vw;
+    top: 12vh;
+  }
+  100% {
+    left: 100vw;
+    top: 57vh;
+  }
+}
+@keyframes duck-fly-3 {
+  0% {
+    left: -150px;
+    top: 18vh;
+  }
+  50% {
+    left: 36vw;
+    top: 61vh;
+  }
+  100% {
+    left: 100vw;
+    top: 52vh;
+  }
+}
+@keyframes duck-fly-4 {
+  0% {
+    left: -150px;
+    top: 22vh;
+  }
+  50% {
+    left: 12vw;
+    top: 10vh;
+  }
+  100% {
+    left: 100vw;
+    top: 77vh;
+  }
+}
 html {
-	counter-reset: count;
+  counter-reset: count;
 }
 
+body {
+  height: 100vh;
+  margin: 0;
+  background-color: #e8f0f0;
+  position: relative;
+}
+
+.duck {
+  position: absolute;
+}
+
+.duck__img {
+  width: 150px;
+}
+
+.duck-check {
+  position: absolute;
+  visibility: hidden;
+  left: -9999999px;
+  /* можно попробовать скрыть чекбоксы иначе */
+  /* display: none; */
+}
 .duck-check:checked {
-	counter-increment: count;
+  counter-increment: count;
+}
+.duck-check:checked ~ label {
+  display: none;
+}
+
+.duck_1 {
+  animation: duck-fly-1 5s ease-in 1s both;
+}
+
+.duck_2 {
+  animation: duck-fly-2 5s ease-in 2s both;
+}
+
+.duck_3 {
+  animation: duck-fly-3 5s ease-in 3s both;
+}
+
+.duck_4 {
+  animation: duck-fly-4 5s ease-in 4s both;
+}
+
+.counter-info {
+  position: absolute;
+  top: 14px;
+  right: 24px;
 }
 
 .counter-info::before {
-	content: counter(count);
-}
+  content: counter(count);
+}/*# sourceMappingURL=style.css.map */

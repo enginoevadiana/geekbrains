@@ -1,0 +1,73 @@
+$widthDuck: 150px;
+$countDuck: 4;
+
+@for $i from 1 through $countDuck {
+	@keyframes duck-fly-#{$i} {
+		0% {
+			left: -$widthDuck;
+			top: random(90)+vh;
+		}
+
+		50% {
+			left: random(60)+vw;
+			top: random(90)+vh;
+		}
+
+		100% {
+			left: 100vw;
+			top: random(90)+vh;
+		}
+	}
+}
+
+
+html {
+	counter-reset: count;
+}
+
+body {
+	height: 100vh;
+	margin: 0;
+	background-color: #e8f0f0;
+	position: relative;
+}
+
+.duck {
+	position: absolute;
+}
+
+.duck__img {
+	width: $widthDuck;
+}
+
+.duck-check {
+	position: absolute;
+	visibility: hidden;
+	left: -9999999px;
+	/* можно попробовать скрыть чекбоксы иначе */
+	/* display: none; */
+
+	&:checked {
+		counter-increment: count;
+	}
+
+	&:checked~label {
+		display: none;
+	}
+}
+
+@for $i from 1 through $countDuck {
+	.duck_#{$i} {
+		animation: duck-fly-#{$i} 5s ease-in #{$i}s both;
+	}
+}
+
+.counter-info {
+	position: absolute;
+	top: 14px;
+	right: 24px;
+}
+
+.counter-info::before {
+	content: counter(count);
+}
