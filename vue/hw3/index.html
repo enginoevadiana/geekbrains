@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Homework 3</title>
+</head>
+
+<body>
+
+	<div id="app" class="demo">
+		<tags></tags>
+	</div>
+
+	<template id="template">
+		<div>
+			<button @click="showArticle(tag.name)" v-for="tag in tags" :key="tag.id">
+				{{ tag.name }}
+			</button>
+			<div class="articles">
+				<div class="artcile" data-tags="kitchen">
+					<h3>Lorem</h3>
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error accusantium, facere incidunt neque illum
+						eos architecto quam magni perspiciatis laudantium amet sed necessitatibus qui ullam, tempore, debitis alias?
+						Dignissimos, nostrum.
+						Quas neque eos dolores amet quo accusantium velit corporis nesciunt doloribus, suscipit voluptate
+						praesentium deserunt dolorem optio repellat nam. Voluptates voluptas non debitis aliquam provident
+						recusandae at odio autem deleniti?
+						Veniam odit veritatis perspiciatis repudiandae maxime pariatur sit earum harum, dolore, quisquam voluptatum
+						voluptates, quas aspernatur non fugiat repellat reiciendis? Amet odit maxime accusamus ipsam quaerat quis
+						nisi sequi magnam.</p>
+					<img src="kitchen.png" alt="">
+				</div>
+				<div class="artcile" data-tags="Kitchen">
+					<h3>Lorem 2</h3>
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error accusantium, facere incidunt neque illum
+						eos architecto quam magni perspiciatis laudantium amet sed necessitatibus qui ullam, tempore, debitis alias?
+						Dignissimos, nostrum.
+						Quas neque eos dolores amet quo accusantium velit corporis nesciunt doloribus, suscipit voluptate
+						praesentium deserunt dolorem optio repellat nam. Voluptates voluptas non debitis aliquam provident
+						recusandae at odio autem deleniti?
+						Veniam odit veritatis perspiciatis repudiandae maxime pariatur sit earum harum, dolore, quisquam voluptatum
+						voluptates, quas aspernatur non fugiat repellat reiciendis? Amet odit maxime accusamus ipsam quaerat quis
+						nisi sequi magnam.</p>
+					<img src="kitchen.png" alt="">
+				</div>
+				<div class="artcile" data-tags="Bedroom">
+					<h3>Lorem</h3>
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error accusantium, facere incidunt neque illum
+						eos architecto quam magni perspiciatis laudantium amet sed necessitatibus qui ullam, tempore, debitis alias?
+						Dignissimos, nostrum.
+						Quas neque eos dolores amet quo accusantium velit corporis nesciunt doloribus, suscipit voluptate
+						praesentium deserunt dolorem optio repellat nam. Voluptates voluptas non debitis aliquam provident
+						recusandae at odio autem deleniti?
+						Veniam odit veritatis perspiciatis repudiandae maxime pariatur sit earum harum, dolore, quisquam voluptatum
+						voluptates, quas aspernatur non fugiat repellat reiciendis? Amet odit maxime accusamus ipsam quaerat quis
+						nisi sequi magnam.</p>
+					<img src="kitchen.png" alt="">
+				</div>
+				<div class="artcile" data-tags="Building">
+					<h3>Lorem</h3>
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error accusantium, facere incidunt neque illum
+						eos architecto quam magni perspiciatis laudantium amet sed necessitatibus qui ullam, tempore, debitis alias?
+						Dignissimos, nostrum.
+						Quas neque eos dolores amet quo accusantium velit corporis nesciunt doloribus, suscipit voluptate
+						praesentium deserunt dolorem optio repellat nam. Voluptates voluptas non debitis aliquam provident
+						recusandae at odio autem deleniti?
+						Veniam odit veritatis perspiciatis repudiandae maxime pariatur sit earum harum, dolore, quisquam voluptatum
+						voluptates, quas aspernatur non fugiat repellat reiciendis? Amet odit maxime accusamus ipsam quaerat quis
+						nisi sequi magnam.</p>
+					<img src="kitchen.png" alt="">
+				</div>
+				<div class="artcile" data-tags="Architecture">
+					<h3>Lorem</h3>
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error accusantium, facere incidunt neque illum
+						eos architecto quam magni perspiciatis laudantium amet sed necessitatibus qui ullam, tempore, debitis alias?
+						Dignissimos, nostrum.
+						Quas neque eos dolores amet quo accusantium velit corporis nesciunt doloribus, suscipit voluptate
+						praesentium deserunt dolorem optio repellat nam. Voluptates voluptas non debitis aliquam provident
+						recusandae at odio autem deleniti?
+						Veniam odit veritatis perspiciatis repudiandae maxime pariatur sit earum harum, dolore, quisquam voluptatum
+						voluptates, quas aspernatur non fugiat repellat reiciendis? Amet odit maxime accusamus ipsam quaerat quis
+						nisi sequi magnam.</p>
+					<img src="kitchen.png" alt="">
+				</div>
+				<div class="artcile" data-tags="Kitchen Planning">
+					<h3>Lorem</h3>
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error accusantium, facere incidunt neque illum
+						eos architecto quam magni perspiciatis laudantium amet sed necessitatibus qui ullam, tempore, debitis alias?
+						Dignissimos, nostrum.
+						Quas neque eos dolores amet quo accusantium velit corporis nesciunt doloribus, suscipit voluptate
+						praesentium deserunt dolorem optio repellat nam. Voluptates voluptas non debitis aliquam provident
+						recusandae at odio autem deleniti?
+						Veniam odit veritatis perspiciatis repudiandae maxime pariatur sit earum harum, dolore, quisquam voluptatum
+						voluptates, quas aspernatur non fugiat repellat reiciendis? Amet odit maxime accusamus ipsam quaerat quis
+						nisi sequi magnam.</p>
+					<img src="kitchen.png" alt="">
+				</div>
+			</div>
+		</div>
+	</template>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+	<script>
+		Vue.component('tags', {
+			template: `#template`,
+			data() {
+				return {
+					taskName: '',
+					tags: [
+						{ id: 1, name: 'Kitchen' },
+						{ id: 2, name: 'Bedroom' },
+						{ id: 3, name: 'Building' },
+						{ id: 4, name: 'Architecture' },
+						{ id: 5, name: 'Kitchen Planning' }
+					],
+				}
+			},
+			methods: {
+				showArticle(articleName) {
+					return this.items.filter(item => item.name.includes(articleName))
+				},
+			},
+		});
+
+		new Vue({
+			el: '#app',
+		});
+
+	</script>
+
+</body>
+
+</html>
+
+<!-- 
+Реализовать страницу Blog details
+На странице отображается подробное описание статьи, а под ней размещаются остальные статьи
+Необходимо на выборе Tags чтобы происходила сортировка статей по выбранному тегу
+Тег можно выбрать только один
+https://www.figma.com/file/okdYD45Tj2JpKsNASccUmf/Interior-Design-Webflow-Website-Template-(Community)-(Copy)-(Copy)?type=design&node-id=541-13&t=mhOD6yhLJuH2Biy0-0 
+-->
