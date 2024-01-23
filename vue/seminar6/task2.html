@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Task 2</title>
+</head>
+
+<body>
+
+	<div id="app" class="demo">
+		<todo-list></todo-list>
+	</div>
+
+	<template id="template">
+		<div>
+			<input type="text" v-model="taskName" placeholder="Добавить элемент">
+			<button @click="addTask">Добавить</button>
+			<ul>
+				<li v-for="task in tasks" :key="task.id">
+					{{ task.name }}
+					<button @click="deleteTask(task.id)">Удалить</button>
+				</li>
+			</ul>
+		</div>
+	</template>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+	<script>
+		Vue.component('todo-list', {
+			template: `#template`,
+			data() {
+				return {
+					taskName: '',
+					tasks: [],
+				}
+			},
+			methods: {
+				addTask() {
+					const newTask = {
+						id: Date.now(),
+						name: this.taskName,
+					}
+					this.tasks.push(newTask);
+					this.taskName = '';
+				},
+				deleteTask(delItem) {
+					this.tasks = this.tasks.filter(item => item.id !== delItem)
+				},
+			},
+		});
+
+		new Vue({
+			el: '#app',
+		});
+
+	</script>
+
+</body>
+
+</html>
+
+<!-- Создать компонент списка дел, в котором можно добавлять и удалять элементы. Каждый элемент списка должен иметь кнопку удаления, при нажатие на которую элемент будет удаляться. -->
