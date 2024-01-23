@@ -1,4 +1,9 @@
 <h1>Vue</h1>
+
+<h3><a href="https://github.com/enginoevadiana/geekbrains/tree/main/vue/hw3">ДЗ 3</a></h3>
+Страница со статьями и тэгами. Статьи должны фильтроваться по выбранному тэгу. Тег можно выбрать только один
+<a href="https://www.figma.com/file/okdYD45Tj2JpKsNASccUmf/Interior-Design-Webflow-Website-Template-(Community)-(Copy)-(Copy)?type=design&node-id=541-13&t=mhOD6yhLJuH2Biy0-0 ">Макет</a>
+
 <h3><a href="https://github.com/enginoevadiana/geekbrains/tree/main/vue/seminar6">Семинар 6</a></h3>
 
 <a href="https://github.com/enginoevadiana/geekbrains/blob/main/vue/seminar6/task1.html">Task 1</a><br>
