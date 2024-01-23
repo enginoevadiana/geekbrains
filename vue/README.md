@@ -1,5 +1,5 @@
 <h1>Vue</h1>
-<h2><a href="https://github.com/enginoevadiana/geekbrains/tree/main/vue/seminar6">Семинар 6</a></h2>
+<h3><a href="https://github.com/enginoevadiana/geekbrains/tree/main/vue/seminar6">Семинар 6</a></h3>
 
 <a href="https://github.com/enginoevadiana/geekbrains/blob/main/vue/seminar6/task1.html">Task 1</a><br>
 Счетчик с кнопками + и -
