@@ -19,7 +19,7 @@
 				{{ tag.name }}
 			</button>
 			<div class="articles">
-				<div class="article" :data-tags="article.tag" v-for="article in filteredArticles" :key="article.id">
+				<div class="article" :data-tags="article.tag" v-for="article in filterItems" :key="article.id">
 					<h3>{{ article.name }}</h3>
 					<p>{{ article.text }}</p>
 					<img src="kitchen.png" alt="">
@@ -34,7 +34,7 @@
 			template: `#template`,
 			data() {
 				return {
-					taskName: '',
+					selectedTag: '',
 					tags: [
 						{ id: 1, name: 'Kitchen' },
 						{ id: 2, name: 'Bedroom' },
@@ -43,7 +43,7 @@
 						{ id: 5, name: 'Kitchen Planning' }
 					],
 					articles: [
-						{ id: 1, name: 'Lorem', tag: 'kitchen', text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error accusantium, facere incidunt neque illum eos architecto quam magni perspiciatis laudantium amet sed necessitatibus qui ullam, tempore, debitis alias? Dignissimos, nostrum. Quas neque eos dolores amet quo accusantium velit corporis nesciunt doloribus, suscipit voluptate praesentium deserunt dolorem optio repellat nam. Voluptates voluptas non debitis aliquam provident recusandae at odio autem deleniti? Veniam odit veritatis perspiciatis repudiandae maxime pariatur sit earum harum, dolore, quisquam voluptatum voluptates, quas aspernatur non fugiat repellat reiciendis? Amet odit maxime accusamus ipsam quaerat quis nisi sequi magnam.' },
+						{ id: 1, name: 'Lorem', tag: 'Kitchen', text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error accusantium, facere incidunt neque illum eos architecto quam magni perspiciatis laudantium amet sed necessitatibus qui ullam, tempore, debitis alias? Dignissimos, nostrum. Quas neque eos dolores amet quo accusantium velit corporis nesciunt doloribus, suscipit voluptate praesentium deserunt dolorem optio repellat nam. Voluptates voluptas non debitis aliquam provident recusandae at odio autem deleniti? Veniam odit veritatis perspiciatis repudiandae maxime pariatur sit earum harum, dolore, quisquam voluptatum voluptates, quas aspernatur non fugiat repellat reiciendis? Amet odit maxime accusamus ipsam quaerat quis nisi sequi magnam.' },
 						{ id: 2, name: 'Lorem 2', tag: 'Kitchen', text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error accusantium, facere incidunt neque illum eos architecto quam magni perspiciatis laudantium amet sed necessitatibus qui ullam, tempore, debitis alias? Dignissimos, nostrum. Quas neque eos dolores amet quo accusantium velit corporis nesciunt doloribus, suscipit voluptate praesentium deserunt dolorem optio repellat nam. Voluptates voluptas non debitis aliquam provident recusandae at odio autem deleniti? Veniam odit veritatis perspiciatis repudiandae maxime pariatur sit earum harum, dolore, quisquam voluptatum voluptates, quas aspernatur non fugiat repellat reiciendis? Amet odit maxime accusamus ipsam quaerat quis nisi sequi magnam.' },
 						{ id: 3, name: 'Lorem', tag: 'Bedroom', text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error accusantium, facere incidunt neque illum eos architecto quam magni perspiciatis laudantium amet sed necessitatibus qui ullam, tempore, debitis alias? Dignissimos, nostrum. Quas neque eos dolores amet quo accusantium velit corporis nesciunt doloribus, suscipit voluptate praesentium deserunt dolorem optio repellat nam. Voluptates voluptas non debitis aliquam provident recusandae at odio autem deleniti? Veniam odit veritatis perspiciatis repudiandae maxime pariatur sit earum harum, dolore, quisquam voluptatum voluptates, quas aspernatur non fugiat repellat reiciendis? Amet odit maxime accusamus ipsam quaerat quis nisi sequi magnam.' },
 						{ id: 4, name: 'Lorem', tag: 'Building', text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error accusantium, facere incidunt neque illum eos architecto quam magni perspiciatis laudantium amet sed necessitatibus qui ullam, tempore, debitis alias? Dignissimos, nostrum. Quas neque eos dolores amet quo accusantium velit corporis nesciunt doloribus, suscipit voluptate praesentium deserunt dolorem optio repellat nam. Voluptates voluptas non debitis aliquam provident recusandae at odio autem deleniti? Veniam odit veritatis perspiciatis repudiandae maxime pariatur sit earum harum, dolore, quisquam voluptatum voluptates, quas aspernatur non fugiat repellat reiciendis? Amet odit maxime accusamus ipsam quaerat quis nisi sequi magnam.' },
@@ -54,8 +54,17 @@
 			},
 			methods: {
 				showArticle(articleName) {
-					this.filteredArticles = this.articles.filter(article => article.tag === articleName);
-					// this.articles = this.articlesSaver;
+					this.selectedTag = articleName;
+				},
+			},
+			computed: {
+				filterItems() {
+					if (this.selectedTag === '') {
+						return this.articles;
+					}
+					else {
+						return this.articles.filter(article => article.tag === this.selectedTag);
+					}
 				},
 			},
 		});
