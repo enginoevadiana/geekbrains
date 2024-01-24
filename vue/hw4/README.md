@@ -1,4 +1,4 @@
-# 8.1_seminar
+# hw4
 
 ## Project setup
 ```
