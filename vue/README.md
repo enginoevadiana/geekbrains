@@ -1,5 +1,11 @@
 <h1>Vue</h1>
 
+<h3><a href="https://github.com/enginoevadiana/geekbrains/tree/main/vue/lecture9">Лекция 9</a></h3>
+Калькулятор с использованием разных директив, Vue.set и computed (+ расчет чисел Фибоначчи) 
+
+<h3><a href="https://github.com/enginoevadiana/geekbrains/tree/main/vue/hw4">ДЗ 4</a></h3>
+Разделить приложение на компоненты и подключить их с помощью Vue CLI
+
 <h3><a href="https://github.com/enginoevadiana/geekbrains/tree/main/vue/seminar8">Семинар 8</a></h3>
 
 <a href="https://github.com/enginoevadiana/geekbrains/blob/main/vue/seminar8/src/components/NewComponent.vue">Task 1</a><br>
