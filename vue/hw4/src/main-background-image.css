@@ -1,0 +1,155 @@
+@media (max-width: 1850px) {
+
+	.logoAndMainMenu {
+		margin-bottom: 30px;
+	}
+
+	.logoContainer img {
+		width: 165px;
+	}
+
+	.mainMenu {
+		font-size: 22px;
+	}
+
+	.getStarted {
+		height: 650px;
+		margin-bottom: 60px;
+	}
+
+	.getStartedTitle {
+		padding: 200px 0 0 60px;
+		font-size: 55px;
+		margin-bottom: 0;
+	}
+
+	.getStartedText {
+		padding: 0 0 0 60px;
+		font-size: 18px;
+	}
+
+	.getStartedButton {
+		padding: 18px 40px 18px 40px;
+		margin-left: 60px;
+		gap: 5px;
+		border-radius: 18px;
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 1650px) {
+
+	.logoAndMainMenu {
+		margin-bottom: 30px;
+	}
+
+	.logoContainer img {
+		width: 165px;
+	}
+
+	.mainMenu {
+		font-size: 22px;
+	}
+
+	.getStarted {
+		height: 580px;
+		margin-bottom: 60px;
+	}
+
+	.getStartedTitle {
+		padding: 200px 0 0 60px;
+		font-size: 55px;
+		margin-bottom: 0;
+	}
+
+	.getStartedText {
+		padding: 0 0 0 60px;
+		font-size: 18px;
+	}
+
+	.getStartedButton {
+		padding: 18px 40px 18px 40px;
+		margin-left: 60px;
+		gap: 5px;
+		border-radius: 18px;
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 1550px) {
+
+	.logoAndMainMenu {
+		margin-bottom: 30px;
+	}
+
+	.logoContainer img {
+		width: 160px;
+	}
+
+	.mainMenu {
+		font-size: 20px;
+	}
+
+	.getStarted {
+		height: 500px;
+		margin-bottom: 30px;
+	}
+
+	.getStartedTitle {
+		padding: 160px 0 0 40px;
+		font-size: 45px;
+		margin-bottom: 0;
+	}
+
+	.getStartedText {
+		padding: 0 0 0 40px;
+		font-size: 16px;
+	}
+
+	.getStartedButton {
+		padding: 14px 32px 14px 32px;
+		margin-left: 40px;
+		gap: 5px;
+		border-radius: 18px;
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 1450px) {
+
+	.logoAndMainMenu {
+		margin-bottom: 30px;
+	}
+
+	.logoContainer img {
+		width: 160px;
+	}
+
+	.mainMenu {
+		font-size: 20px;
+	}
+
+	.getStarted {
+		height: 450px;
+		margin-bottom: 30px;
+	}
+
+	.getStartedTitle {
+		padding: 160px 0 0 40px;
+		font-size: 45px;
+		margin-bottom: 0;
+	}
+
+	.getStartedText {
+		padding: 0 0 0 40px;
+		font-size: 16px;
+	}
+
+	.getStartedButton {
+		padding: 14px 32px 14px 32px;
+		margin-left: 40px;
+		gap: 5px;
+		border-radius: 18px;
+		font-size: 14px;
+	}
+}
