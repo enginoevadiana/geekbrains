@@ -12,7 +12,7 @@
 <a href="https://github.com/enginoevadiana/geekbrains/blob/main/vue/seminar12/src/components/TaskThree.vue">Task 3</a><br>
 Приложение для отображения списка фильмов. На странице должна отображаться информация (название, режиссер, год) для каждого фильма из массива. При клике на фильм, он отображается как выбранный в специальном блоке.
 
-<h3><a href="https://github.com/enginoevadiana/geekbrains/tree/main/vue/lecture10">Лекция 10</a></h3>
+<h3><a href="https://github.com/enginoevadiana/geekbrains/tree/main/vue/lecture11">Лекция 11</a></h3>
 Взаимодействие между компонентами.
 Создаем приложение для записи текущих расходов. 
 Выводится список уже существующих расходов из массива (с помощью компонента PaymentDisplay).
