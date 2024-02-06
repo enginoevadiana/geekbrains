@@ -1,15 +1,15 @@
 <h1>Vue</h1>
 
-<h3><a href="https://github.com/enginoevadiana/geekbrains/tree/main/vue/seminar8">Семинар 10</a></h3>
+<h3><a href="https://github.com/enginoevadiana/geekbrains/tree/main/vue/seminar10">Семинар 10</a></h3>
 
-<a href="https://github.com/enginoevadiana/geekbrains/blob/main/vue/seminar8/src/components/NewComponent.vue">Task 1</a><br>
+<a href="https://github.com/enginoevadiana/geekbrains/blob/main/vue/seminar10/src/components/TaskOne.vue">Task 1</a><br>
 Компонент "Список пользователей" (UserList), который будет отображать список пользователей из переданного массива. Каждый пользователь должен быть представлен в виде отдельного компонента "Пользователь" (User), принимающего пропсы с данными о пользователе (например, имя, фамилия и электронная почта).
 
-<a href="https://github.com/enginoevadiana/geekbrains/blob/main/vue/seminar8/src/components/ProductCard.vue">Task 2</a><br>
+<a href="https://github.com/enginoevadiana/geekbrains/blob/main/vue/seminar10/src/components/TaskTwo.vue">Task 2</a><br>
 Приложения для отображения информации о книгах. Требуется создать компонент "Книга" (Book), который будет отображать информацию о книге (название, автор и год издания). Компонент "Книга" должен иметь возможность отображать дополнительные детали о книге, если они существуют. 
 (+ все данные о книги скрыты, пока не кликнешь на необходимую книгу (аккордеон))
 
-<a href="https://github.com/enginoevadiana/geekbrains/blob/main/vue/seminar8/src/components/ProductCard.vue">Task 3</a><br>
+<a href="https://github.com/enginoevadiana/geekbrains/blob/main/vue/seminar10/src/components/TaskThree.vue">Task 3</a><br>
 Приложение для отображения списка фильмов. На странице должна отображаться информация (название, режиссер, год) для каждого фильма из массива. При клике на фильм, он отображается как выбранный в специальном блоке.
 
 <h3><a href="https://github.com/enginoevadiana/geekbrains/tree/main/vue/lecture9">Лекция 9</a></h3>
