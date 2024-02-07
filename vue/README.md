@@ -1,5 +1,8 @@
 <h1>Vue</h1>
 
+<h3><a href="https://github.com/enginoevadiana/geekbrains/tree/main/vue/lecture13">Лекция 13</a></h3>
+Vuex (store, state, mutations, actions, getters)
+
 <h3><a href="https://github.com/enginoevadiana/geekbrains/tree/main/vue/seminar12">Семинар 12</a></h3>
 
 <a href="https://github.com/enginoevadiana/geekbrains/blob/main/vue/seminar12/src/components/TaskOne.vue">Task 1</a><br>
