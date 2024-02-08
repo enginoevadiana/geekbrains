@@ -1,5 +1,16 @@
 <h1>Vue</h1>
 
+<h3><a href="https://github.com/enginoevadiana/geekbrains/tree/main/vue/seminar14">Семинар 14</a></h3>
+
+<a href="https://github.com/enginoevadiana/geekbrains/blob/main/vue/seminar14/src/components/CounterInfo.vue">Task 1</a><br>
+Создайте новое Vuex-хранилище, определите в нем состояние (state) и несколько базовых мутаций (mutations). Подключите хранилище к вашему приложению Vue.js и используйте его для управления состоянием приложения.
+Создайте счетчик который хранит состояние count.
+Создайте две мутации, которые увеличивают и уменьшают значение счетчика.
+Создайте компонент счетчик.
+
+<a href="https://github.com/enginoevadiana/geekbrains/blob/main/vue/seminar14/src/components/CartDisplay.vue">Task 2</a><br>
+Функциональность управления корзиной покупок с использованием Vuex и геттеров.
+
 <h3><a href="https://github.com/enginoevadiana/geekbrains/tree/main/vue/lecture13">Лекция 13</a></h3>
 Vuex (store, state, mutations, actions, getters)
 
