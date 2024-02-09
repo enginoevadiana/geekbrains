@@ -132,14 +132,17 @@
 				</div>
 			</div>
 		</div>
+		<ArticlesNews />
 	</div>
 </template>
 
 <script>
+import ArticlesNews from '@/components/ArticlesNews.vue';
 
 export default {
 	name: 'HomePage',
 	components: {
+		ArticlesNews,
 	},
 };
 </script>
