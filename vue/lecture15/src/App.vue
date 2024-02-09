@@ -15,9 +15,9 @@
 
 export default {
 	name: 'App',
-	created() {
-		this.$router.push({ name: 'dashboard' })
-	}
+	// created() {
+	// 	this.$router.push({ name: 'dashboard' })
+	// }
 }
 </script>
 

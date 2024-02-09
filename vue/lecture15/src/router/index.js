@@ -19,14 +19,18 @@ export default new Router({
 			name: 'about',
 			component: AboutContent
 		},
-		{
-			path: '/404',
-			name: 'NotFound',
-			component: NotFound
-		},
+		// {
+		// 	path: '/404',
+		// 	name: 'NotFound',
+		// 	component: NotFound
+		// },
+		// {
+		// 	path: '*',
+		// 	redirect: '/404'
+		// },
 		{
 			path: '*',
-			redirect: '/404'
+			component: NotFound
 		},
 	]
 }) 
