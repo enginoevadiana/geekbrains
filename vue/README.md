@@ -1,5 +1,73 @@
 <h1>Vue</h1>
 
+<h3><a href="https://github.com/enginoevadiana/geekbrains/tree/main/vue/finish-project">Финальный проект</a></h3>
+
+<a href="https://www.figma.com/file/okdYD45Tj2JpKsNASccUmf/Interior-Design-Webflow-Website-Template-(Community)-(Copy)-(Copy)?type=design&node-id=101-14&mode=design&t=iTI9LeTZLNoRnTQG-0">Макеты</a>
+
+
+
+<h4>Что реализовано:</h4>
+
+Список страниц:
+<ul>
+	<li>Home</li>
+	<li>Project</li>
+	<li>Project Details</li>
+	<li>Blog</li>
+	<li>Blog Details</li>
+	<li>404</li>
+</ul>
+
+Список компонентов:
+<ul>
+	<li>HeaderItem</li>
+	<li>FooterItem</li>
+	<li>ArticlesNews</li>
+</ul>
+
+Функции каждой страницы:
+
+**Home**
+<ul>
+	<li>Использование компонента ArticlesNews</li>
+	<li>Вывод projects из data</li>
+</ul>
+
+**Project**
+<ul>
+	<li>Вывод tags из data</li>
+	<li>Вывод projects из data (массив делится на 2 части для реализации позиционирования из макета)</li>
+	<li>Реализация вывода проектов по выбранному тегу (функция showProject и computed filterItems)</li>
+</ul>
+
+**Project Details**
+<ul>
+	<li>Слайдер с изображениями</li>
+	<li>Открытие изображения на новой вкладки при клике на иконку</li>
+</ul>
+
+**Blog**
+<ul>
+	<li>Использование компонента ArticlesNews</li>
+	<li>Вывод articles из data</li>
+	<li>Вывод projects из data</li>
+</ul>
+
+**Blog Details**
+<ul>
+	<li>Вывод tags из data</li>
+	<li>Вывод articles из data</li>
+	<li>Реализация вывода статей по выбранному тегу (функция showArticle и computed filterItems)</li>
+</ul>
+
+**Другое**
+<ul>
+	<li>Переключение страниц через Vue Router</li>
+	<li>Стили для разных экранов (1750 и больше, меньше 1750)</li>
+</ul>
+
+***
+
 <h3><a href="https://github.com/enginoevadiana/geekbrains/tree/main/vue/lecture15">Лекция 15</a></h3>
 Vue-Router
 
