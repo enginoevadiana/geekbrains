@@ -3,10 +3,7 @@
 
 		<div class="articlaeNewsCatalog">
 			<div v-for="article in articles" :key="article.id" class="articlaeNewsCatalogCard">
-				<!-- {{ article }} -->
 				<img v-bind:src="article.img" alt="product" class="articlaeNewsImg">
-				<!-- <img src="@/assets/news2.png" alt="product" class="articlaeNewsImg"> -->
-
 				<p class="articlaeNewsTitle2">{{ article.text }}</p>
 				<div class="articlaeNewsSubtitle">
 					<p class="articlaeNewsSubtitleText">{{ article.date }}</p>

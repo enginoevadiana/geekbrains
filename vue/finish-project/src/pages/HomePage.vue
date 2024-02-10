@@ -154,6 +154,12 @@ export default {
 </script>
 
 <style>
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 .header {
 	margin: 40px 320px 0 320px;
 }
