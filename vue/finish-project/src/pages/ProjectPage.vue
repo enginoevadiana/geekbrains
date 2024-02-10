@@ -14,7 +14,8 @@
 
 			<div class="projectCatalog">
 				<div class="projectLeft">
-					<div v-for="project in filterItems" :key="project.id" class="projectCard">
+					<div v-for="project in filterItems.slice(0, Math.ceil(filterItems.length / 2))" :key="project.id"
+						class="projectCard">
 						<img v-bind:src="project.img" alt="image">
 						<div class="projectSubtitle">
 							<div class="subtitleContainer">
@@ -32,8 +33,8 @@
 					</div>
 				</div>
 				<div class="projectRight">
-					<div v-for="project in projectsright.slice(0, Math.ceil(projectsright.length / 2))" :key="project.id"
-						class="projectCard">
+					<div v-for="project in filterItems.slice(Math.ceil(filterItems.length / 2), filterItems.length)"
+						:key="project.id" class="projectCard">
 						<img v-bind:src="project.img" alt="image">
 						<div class="projectSubtitle">
 							<div class="subtitleContainer">
@@ -94,12 +95,12 @@ export default {
 				{ id: 3, name: 'Bathroom' },
 				{ id: 4, name: 'Living Area' },
 			],
-			projectsleft: [
+			projects: [
 				{
 					id: 1, text: 'Minimal Bedroom', tag: 'Bedroom', subtext: 'Decor / Artchitecture', img: require('@/assets/project1.jpg'),
 				},
 				{
-					id: 2, text: 'Classic Minimal Bedroom', tag: 'Kitchen', subtext: 'Decor / Artchitecture', img: require('@/assets/project3.jpg'),
+					id: 2, text: 'Classic Minimal Bedroom', tag: 'Bedroom', subtext: 'Decor / Artchitecture', img: require('@/assets/project3.jpg'),
 				},
 				{
 					id: 3, text: 'Minimal Bedroom table', tag: 'Bedroom', subtext: 'Decor / Artchitecture', img: require('@/assets/project5.jpg'),
@@ -107,38 +108,48 @@ export default {
 				{
 					id: 4, text: 'Modern Bedroom', tag: 'Bedroom', subtext: 'Decor / Artchitecture', img: require('@/assets/project7.jpg'),
 				},
+				{
+					id: 5, text: 'Minimal Bedroom', tag: 'Bedroom', subtext: 'Decor / Artchitecture', img: require('@/assets/project2.jpg'),
+				},
+				{
+					id: 6, text: 'Modern Bedroom', tag: 'Bedroom', subtext: 'Decor / Artchitecture', img: require('@/assets/project4.jpg'),
+				},
+				{
+					id: 7, text: 'System table', tag: 'Living Area', subtext: 'Decor / Artchitecture', img: require('@/assets/project6.jpg'),
+				},
+				{
+					id: 8, text: 'Modern Bedroom', tag: 'Bedroom', subtext: 'Decor / Artchitecture', img: require('@/assets/project8.jpg'),
+				},
+				{
+					id: 9, text: 'Modern Kitchen', tag: 'Kitchen', subtext: 'Decor / Artchitecture', img: require('@/assets/project9.jpg'),
+				},
+				{
+					id: 10, text: 'Modern Bathroom', tag: 'Bathroom', subtext: 'Decor / Artchitecture', img: require('@/assets/project10.jpg'),
+				},
+				{
+					id: 11, text: 'Bright Bathroom', tag: 'Bathroom', subtext: 'Decor / Artchitecture', img: require('@/assets/project11.jpg'),
+				},
+				{
+					id: 12, text: 'Stylish Kitchen', tag: 'Kitchen', subtext: 'Decor / Artchitecture', img: require('@/assets/project12.jpg'),
+				},
+				{
+					id: 13, text: 'Bohemian living area', tag: 'Living Area', subtext: 'Decor / Artchitecture', img: require('@/assets/project13.jpg'),
+				},
 			],
-			projectsright: [
-				{
-					id: 1, text: 'Minimal Bedroom', tag: 'Bedroom', subtext: 'Decor / Artchitecture', img: require('@/assets/project2.jpg'),
-				},
-				{
-					id: 2, text: 'Modern Bedroom', tag: 'Bedroom', subtext: 'Decor / Artchitecture', img: require('@/assets/project4.jpg'),
-				},
-				{
-					id: 3, text: 'Bedroom table', tag: 'Bedroom', subtext: 'Decor / Artchitecture', img: require('@/assets/project6.jpg'),
-				},
-				{
-					id: 4, text: 'Modern Bedroom', tag: 'Kitchen', subtext: 'Decor / Artchitecture', img: require('@/assets/project8.jpg'),
-				},
-			]
 		};
 	},
 	methods: {
 		showProject(tag) {
-			console.log(tag);
 			this.selectedTag = tag;
 		},
 	},
 	computed: {
 		filterItems() {
 			if (this.selectedTag === '') {
-				console.log('empty');
-				return this.projectsleft;
+				return this.projects;
 			}
 			else {
-				console.log('not empty');
-				return this.projectsleft.filter(project => project.tag === this.selectedTag);
+				return this.projects.filter(project => project.tag === this.selectedTag);
 			}
 		},
 	},
