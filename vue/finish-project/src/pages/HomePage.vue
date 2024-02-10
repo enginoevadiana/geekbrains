@@ -132,7 +132,13 @@
 				</div>
 			</div>
 		</div>
-		<ArticlesNews />
+		<div class="articlaeNews">
+			<p class="articlaeNewsTitle">Articles &#38; News</p>
+			<p class="articlaeNewsText">It is a long established fact that a reader will be distracted by the of readable
+				<br>content of a page when lookings at its layouts the points of using.
+			</p>
+			<ArticlesNews />
+		</div>
 	</div>
 </template>
 
@@ -325,6 +331,31 @@ main {
 	margin-top: 0;
 }
 
+.articlaeNews {
+	margin: 0px 320px 50px 320px;
+}
+
+.articlaeNewsTitle {
+	color: #292F36;
+	text-align: center;
+	font-family: 'DM Serif Display';
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 400;
+	margin-bottom: 5px;
+}
+
+.articlaeNewsText {
+	color: #4D5053;
+	text-align: center;
+	font-family: 'Jost';
+	font-size: 13px;
+	font-style: normal;
+	font-weight: 400;
+	margin-top: 0;
+	margin-bottom: 30px;
+}
+
 @media (min-width: 1750px) {
 
 	.header {
@@ -480,6 +511,31 @@ main {
 		font-style: normal;
 		font-weight: 400;
 		margin-top: 0;
+	}
+
+	.articlaeNews {
+		margin: 0px 320px 80px 320px;
+	}
+
+	.articlaeNewsTitle {
+		color: #292F36;
+		text-align: center;
+		font-family: 'DM Serif Display';
+		font-size: 50px;
+		font-style: normal;
+		font-weight: 400;
+		margin-bottom: 5px;
+	}
+
+	.articlaeNewsText {
+		color: #4D5053;
+		text-align: center;
+		font-family: 'Jost';
+		font-size: 22px;
+		font-style: normal;
+		font-weight: 400;
+		margin-top: 0;
+		margin-bottom: 50px;
 	}
 }
 </style>
