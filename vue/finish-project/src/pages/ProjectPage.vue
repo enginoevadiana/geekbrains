@@ -6,7 +6,7 @@
 		<div class="projectContainer">
 			<div class="tags">
 				<div class="tags-container-new">
-					<button @click="showArticle(tag.name)" v-for="tag in tags" :key="tag.id">
+					<button @click="showProject(tag.name)" v-for="tag in tags" :key="tag.id">
 						{{ tag.name }}
 					</button>
 				</div>
@@ -14,7 +14,7 @@
 
 			<div class="projectCatalog">
 				<div class="projectLeft">
-					<div v-for="project in projectsleft" :key="project.id" class="projectCard">
+					<div v-for="project in filterItems" :key="project.id" class="projectCard">
 						<img v-bind:src="project.img" alt="image">
 						<div class="projectSubtitle">
 							<div class="subtitleContainer">
@@ -32,7 +32,8 @@
 					</div>
 				</div>
 				<div class="projectRight">
-					<div v-for="project in projectsright" :key="project.id" class="projectCard">
+					<div v-for="project in projectsright.slice(0, Math.ceil(projectsright.length / 2))" :key="project.id"
+						class="projectCard">
 						<img v-bind:src="project.img" alt="image">
 						<div class="projectSubtitle">
 							<div class="subtitleContainer">
@@ -86,6 +87,7 @@ export default {
 
 	data() {
 		return {
+			selectedTag: '',
 			tags: [
 				{ id: 1, name: 'Kitchen' },
 				{ id: 2, name: 'Bedroom' },
@@ -94,41 +96,51 @@ export default {
 			],
 			projectsleft: [
 				{
-					id: 1, text: 'Minimal Bedroom', subtext: 'Decor / Artchitecture', img: require('@/assets/project1.jpg'),
+					id: 1, text: 'Minimal Bedroom', tag: 'Bedroom', subtext: 'Decor / Artchitecture', img: require('@/assets/project1.jpg'),
 				},
 				{
-					id: 2, text: 'Classic Minimal Bedroom', subtext: 'Decor / Artchitecture', img: require('@/assets/project3.jpg'),
+					id: 2, text: 'Classic Minimal Bedroom', tag: 'Kitchen', subtext: 'Decor / Artchitecture', img: require('@/assets/project3.jpg'),
 				},
 				{
-					id: 3, text: 'Minimal Bedroom table', subtext: 'Decor / Artchitecture', img: require('@/assets/project5.jpg'),
+					id: 3, text: 'Minimal Bedroom table', tag: 'Bedroom', subtext: 'Decor / Artchitecture', img: require('@/assets/project5.jpg'),
 				},
 				{
-					id: 4, text: 'Modern Bedroom', subtext: 'Decor / Artchitecture', img: require('@/assets/project7.jpg'),
+					id: 4, text: 'Modern Bedroom', tag: 'Bedroom', subtext: 'Decor / Artchitecture', img: require('@/assets/project7.jpg'),
 				},
 			],
 			projectsright: [
 				{
-					id: 1, text: 'Minimal Bedroom', subtext: 'Decor / Artchitecture', img: require('@/assets/project2.jpg'),
+					id: 1, text: 'Minimal Bedroom', tag: 'Bedroom', subtext: 'Decor / Artchitecture', img: require('@/assets/project2.jpg'),
 				},
 				{
-					id: 2, text: 'Modern Bedroom', subtext: 'Decor / Artchitecture', img: require('@/assets/project4.jpg'),
+					id: 2, text: 'Modern Bedroom', tag: 'Bedroom', subtext: 'Decor / Artchitecture', img: require('@/assets/project4.jpg'),
 				},
 				{
-					id: 3, text: 'Bedroom table', subtext: 'Decor / Artchitecture', img: require('@/assets/project6.jpg'),
+					id: 3, text: 'Bedroom table', tag: 'Bedroom', subtext: 'Decor / Artchitecture', img: require('@/assets/project6.jpg'),
 				},
 				{
-					id: 4, text: 'Modern Bedroom', subtext: 'Decor / Artchitecture', img: require('@/assets/project8.jpg'),
+					id: 4, text: 'Modern Bedroom', tag: 'Kitchen', subtext: 'Decor / Artchitecture', img: require('@/assets/project8.jpg'),
 				},
 			]
 		};
 	},
-
-	mounted() {
-
-	},
-
 	methods: {
-
+		showProject(tag) {
+			console.log(tag);
+			this.selectedTag = tag;
+		},
+	},
+	computed: {
+		filterItems() {
+			if (this.selectedTag === '') {
+				console.log('empty');
+				return this.projectsleft;
+			}
+			else {
+				console.log('not empty');
+				return this.projectsleft.filter(project => project.tag === this.selectedTag);
+			}
+		},
 	},
 };
 </script>
