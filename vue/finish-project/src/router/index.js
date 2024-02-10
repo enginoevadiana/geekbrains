@@ -5,6 +5,7 @@ import HomePage from '@/pages/HomePage.vue';
 import ProjectPage from '@/pages/ProjectPage.vue';
 import BlogPage from '@/pages/BlogPage.vue';
 import BlogDetails from '@/pages/BlogDetails.vue';
+import ProjectDetails from '@/pages/ProjectDetails.vue';
 
 Vue.use(Router);
 
@@ -30,6 +31,11 @@ export default new Router({
 			path: '/blogdetails',
 			name: 'blogdetails',
 			component: BlogDetails
+		},
+		{
+			path: '/projectdetails',
+			name: 'projectdetails',
+			component: ProjectDetails
 		},
 		{
 			path: '*',

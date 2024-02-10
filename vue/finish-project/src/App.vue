@@ -26,4 +26,10 @@ export default {
 	padding: 0;
 	box-sizing: border-box;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Jost:wght@400;600&display=swap');
+
+#app {
+	font-family: 'Roboto', sans-serif;
+}
 </style>
