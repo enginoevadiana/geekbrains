@@ -24,64 +24,21 @@
 					<br>content of page lookings at its layouts points.
 				</p>
 				<div class="followProjectCatalog">
-					<div class="followProjectCatalogCard">
-						<img src="@/assets/product1.png" alt="product" class="followProjectImg">
+					<div v-for="project in projects" :key="project.id" class="followProjectCatalogCard">
+						{{ item }}
+						<img :src="project.img" alt="project" class="followProjectImg">
 						<div class="followProjectSubtitle">
 							<div class="subtitleContainer">
-								<p class="subtitleContainerTitle">Modern Kitchan</p>
-								<p class="subtitleContainerText">Decor / Artchitecture</p>
+								<p class="subtitleContainerTitle">{{ project.title }}</p>
+								<p class="subtitleContainerText">{{ project.subtitle }}</p>
 							</div>
-							<a href="#"><svg class="subtitleContainerSvg" viewBox="0 0 70 70" fill="none"
-									xmlns="http://www.w3.org/2000/svg">
+							<router-link to="/projectdetails">
+								<svg class="subtitleContainerSvg" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<circle cx="35" cy="35" r="35" fill="#F4F0EC" />
 									<path d="M32 44L40 35L32 26" stroke="#292F36" stroke-width="2" stroke-linecap="round"
 										stroke-linejoin="round" />
-								</svg></a>
-						</div>
-					</div>
-					<div class="followProjectCatalogCard">
-						<img src="@/assets/product2.png" alt="product" class="followProjectImg">
-						<div class="followProjectSubtitle">
-							<div class="subtitleContainer">
-								<p class="subtitleContainerTitle">Modern Kitchan</p>
-								<p class="subtitleContainerText">Decor / Artchitecture</p>
-							</div>
-							<a href="#"><svg class="subtitleContainerSvg" viewBox="0 0 70 70" fill="none"
-									xmlns="http://www.w3.org/2000/svg">
-									<circle cx="35" cy="35" r="35" fill="#F4F0EC" />
-									<path d="M32 44L40 35L32 26" stroke="#292F36" stroke-width="2" stroke-linecap="round"
-										stroke-linejoin="round" />
-								</svg></a>
-						</div>
-					</div>
-					<div class="followProjectCatalogCard">
-						<img src="@/assets/product3.png" alt="product" class="followProjectImg">
-						<div class="followProjectSubtitle">
-							<div class="subtitleContainer">
-								<p class="subtitleContainerTitle">Modern Kitchan</p>
-								<p class="subtitleContainerText">Decor / Artchitecture</p>
-							</div>
-							<a href="#"><svg class="subtitleContainerSvg" viewBox="0 0 70 70" fill="none"
-									xmlns="http://www.w3.org/2000/svg">
-									<circle cx="35" cy="35" r="35" fill="#F4F0EC" />
-									<path d="M32 44L40 35L32 26" stroke="#292F36" stroke-width="2" stroke-linecap="round"
-										stroke-linejoin="round" />
-								</svg></a>
-						</div>
-					</div>
-					<div class="followProjectCatalogCard">
-						<img src="@/assets/product4.png" alt="product" class="followProjectImg">
-						<div class="followProjectSubtitle">
-							<div class="subtitleContainer">
-								<p class="subtitleContainerTitle">Modern Kitchan</p>
-								<p class="subtitleContainerText">Decor / Artchitecture</p>
-							</div>
-							<a href="#"><svg class="subtitleContainerSvg" viewBox="0 0 70 70" fill="none"
-									xmlns="http://www.w3.org/2000/svg">
-									<circle cx="35" cy="35" r="35" fill="#F4F0EC" />
-									<path d="M32 44L40 35L32 26" stroke="#292F36" stroke-width="2" stroke-linecap="round"
-										stroke-linejoin="round" />
-								</svg></a>
+								</svg>
+							</router-link>
 						</div>
 					</div>
 				</div>
@@ -149,6 +106,24 @@ export default {
 	name: 'HomePage',
 	components: {
 		ArticlesNews,
+	},
+	data() {
+		return {
+			projects: [
+				{
+					id: 1, title: 'Modern Kitchan', subtitle: 'Decor / Artchitecture', img: require('@/assets/product1.png'),
+				},
+				{
+					id: 2, title: 'Modern Kitchan', subtitle: 'Decor / Artchitecture', img: require('@/assets/product2.png'),
+				},
+				{
+					id: 3, title: 'Modern Kitchan', subtitle: 'Decor / Artchitecture', img: require('@/assets/product3.png'),
+				},
+				{
+					id: 4, title: 'Modern Kitchan', subtitle: 'Decor / Artchitecture', img: require('@/assets/product4.png'),
+				},
+			]
+		}
 	},
 };
 </script>

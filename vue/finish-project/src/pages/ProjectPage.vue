@@ -22,13 +22,13 @@
 								<h3>{{ project.text }}</h3>
 								<p>{{ project.subtext }}</p>
 							</div>
-							<a href="#">
+							<router-link to="/projectdetails">
 								<svg width="35" height="35" viewBox="0 0 70 70" fill="#F4F0EC" xmlns="http://www.w3.org/2000/svg">
 									<circle cx="35" cy="35" r="35" />
 									<path d="M32 44L40 35L32 26" stroke="#292F36" stroke-width="2" stroke-linecap="round"
 										stroke-linejoin="round" />
 								</svg>
-							</a>
+							</router-link>
 						</div>
 					</div>
 				</div>
@@ -41,13 +41,13 @@
 								<h3>{{ project.text }}</h3>
 								<p>{{ project.subtext }}</p>
 							</div>
-							<a href="#">
+							<router-link to="/projectdetails">
 								<svg width="35" height="35" viewBox="0 0 70 70" fill="#F4F0EC" xmlns="http://www.w3.org/2000/svg">
 									<circle cx="35" cy="35" r="35" />
 									<path d="M32 44L40 35L32 26" stroke="#292F36" stroke-width="2" stroke-linecap="round"
 										stroke-linejoin="round" />
 								</svg>
-							</a>
+							</router-link>
 						</div>
 					</div>
 				</div>
